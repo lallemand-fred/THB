@@ -19,3 +19,19 @@ nav .logoNav{
     max-width: 60px;
     padding-left: 20px;
 }
+nav .logoNav img{
+    max-width: 60px;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a{
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-left: 0px;
+    margin-right: 20px;
+}
