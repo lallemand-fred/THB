@@ -6,5 +6,11 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-
+    padding: 4px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    background: linear-gradient( to bottom, rgb(39,28,25), transparent);
 }
