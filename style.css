@@ -2,9 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
 /* ---------------------ROOT------------------------ */
 :root{
-    --font-polic:font-family: 'Tinos', serif;
+    --font-police:font-family: 'Tinos', serif;
     --font-size:1.3rem;
     --color-text: #fefde5;
+}
+/* -------------------page html---------------------- */
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font-police);
+}
+html{
+    scroll-behavior: smooth;
 }
 /* --------------------NAVBAR----------------------- */
 nav{
