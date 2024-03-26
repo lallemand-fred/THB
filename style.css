@@ -1,5 +1,11 @@
 /* --------------------POLICE----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+/* ---------------------ROOT------------------------ */
+:root{
+    --font-polic:font-family: 'Tinos', serif;
+    --font-size:1.3rem;
+    --color-text: #fefde5;
+}
 /* --------------------NAVBAR----------------------- */
 nav{
     position: fixed;
