@@ -1,6 +1,6 @@
-/* --------------------POLICE----------------------- */
+/* -------------------- POLICE ----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
-/* ---------------------ROOT------------------------ */
+/* --------------------- ROOT ------------------------ */
 :root{
     --font-police:font-family 'Tinos', serif;
     --font-size:1.3rem;
@@ -10,9 +10,8 @@
     --bg-color: #271c19;
     --bg-colorS2: #302226;
 }
-/* -------------------HTML---------------------- */
+/* -------------------HTML DOOM---------------------- */
 *{
-    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -22,7 +21,7 @@
 html{
     scroll-behavior: smooth;
 }
-/* --------------------NAVBAR----------------------- */
+/* -------------------- NAVBAR ----------------------- */
 nav{
     position: fixed;
     top: 0;
@@ -57,7 +56,7 @@ nav ul li a{
     margin-left: 0px;
     margin-right: 20px;
 }
-/* --------------------NAVBAR EFFECT----------------------- */
+/* ------------------ NAVBAR EFFECT --------------------- */
 nav ul li.active a,
 nav ul li:hover a{
     color: var(--color-text-Hover);
@@ -110,7 +109,7 @@ body{
     height: 80px;
     background: var(--bg-color);
 }
-/* -------------------Flou dégradé autour de l'image-------------------------- */
+/* --------- Flou dégradé autour de l'image ---------- */
 #secImageAccueil::before{
     padding-right: 10px;
     z-index: 10;
@@ -120,7 +119,7 @@ body{
     width: 759px;
     box-shadow: inset 0em 0em 20px 20px var(--bg-color);
 }
-/* -------------------------- Images accueil background animé -------------------------- */
+/* --------- Images accueil background animé --------- */
 #secImageAccueil{
     position: relative;
     background-color: var(--bg-color);
@@ -140,7 +139,7 @@ body{
     height: 100%;
     object-fit: cover;
 }
-/* -------------------- ANIMATION RONDS BACKGROUND------------------------- */
+/* ----------- ANIMATION RONDS BACKGROUND ---------- */
 .rondD{
     transform-origin: 84.7% 87.3% ;
     transform: rotate(0deg);
@@ -158,7 +157,7 @@ body{
 @keyframes rondG{
     100% {-webkit-transform:rotate(-360deg);}
 }
-/* -------------------- ANIMATION Verres BACKGROUND------------------------- */
+/* ------------- ANIMATION Verres BACKGROUND ---------- */
 .verreD{
     transform-origin: 84.7% 87.3% ;
     animation: verreD 1s infinite ease-out;
@@ -223,7 +222,7 @@ body{
         -webkit-transform: translate(1%);
     }
 }
-/* -------------------- ANIMATION des 3 points BACKGROUND------------------------- */
+/* -------- ANIMATION des 3 points BACKGROUND ------- */
 .exclaD{
     animation: exclaD 1s infinite ease-out;
 }
@@ -242,7 +241,7 @@ body{
     100% {-webkit-transform:translate(1%);}
     0%{-webkit-transform:translate(-1%);}
 }
-/* -------------------- ANIMATION FLECHE BACKGROUND------------------------- */
+/* ------ ANIMATION FLECHE BACKGROUND ----------- */
 .flecheD{
     transform: translate(0);
     animation: flecheD 1s linear infinite;
@@ -271,7 +270,7 @@ body{
         -webkit-transform:rotate(0deg);
     }
 }
-/* --------------------Text de présentation avec logo------------------------- */
+/* ----- Text de présentation avec logo ---------- */
 #textPresentation h1 {
     font-family: var(--font-police);
     letter-spacing: 2px;
@@ -301,7 +300,7 @@ body{
     display: block;
     content: '';
 }
-/* -------------------LOGO dans le texte---------------------- */
+/* --------------- LOGO dans le texte --------------- */
 
 #textPresentation img{
     display: block;
@@ -313,7 +312,7 @@ body{
     max-width: 256px;
     shape-outside: content-box;
 }
-/* --------------------MENU3----------------------- */
+/* -------------------- MENU3 ----------------------- */
 .menu3{
     padding-top: 100px;
     padding-bottom: 50px;
