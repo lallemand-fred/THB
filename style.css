@@ -110,6 +110,16 @@ body{
     height: 80px;
     background: var(--bg-color);
 }
+/* -------------------Flou dégradé autour de l'image-------------------------- */
+#secImageAccueil::before{
+    padding-right: 10px;
+    z-index: 10;
+    content: '';
+    position: absolute;
+    height: 924px;
+    width: 759px;
+    box-shadow: inset 0em 0em 20px 20px var(--bg-color);
+}
 /* -------------------------- Images accueil background animé -------------------------- */
 #secImageAccueil{
     position: relative;
