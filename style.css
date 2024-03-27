@@ -5,7 +5,10 @@
     --font-police:font-family:'Tinos', serif;
     --font-size:1.3rem;
     --color-text: #fefde5;
+    --color-textS2: #333;
     --color-text-Hover: #e4ab4e;
+    --bg-color: #271c19;
+
 }
 /* -------------------HTML---------------------- */
 *{
@@ -94,4 +97,167 @@ nav ul li:hover a{
 }
 .deux-linges:hover::before {
     transition-delay: 0s;
+}
+/* ------------------- BODY ------------------------- */
+body{
+    overflow-x: hidden;
+    background: var(--bg-color);
+    color: var(--color-text);
+}
+#separation01{
+    position: relative;
+    width: 100vw;
+    height: 80px;
+    background: var(--bg-color);
+}
+/* -------------------------- Images accueil background animé -------------------------- */
+#secImageAccueil{
+    position: relative;
+    background-color: var(--bg-color);
+    height: 924px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+#secImageAccueil img{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: clamp(150px, 100%, 759px);
+    height: 100%;
+    object-fit: cover;
+}
+/* -------------------- ANIMATION RONDS BACKGROUND------------------------- */
+.rondD{
+    transform-origin: 84.7% 87.3% ;
+    transform: rotate(0deg);
+    animation: rondD 6s linear infinite;
+}
+@keyframes rondD{
+    100% {-webkit-transform:rotate(360deg);}
+}
+
+.rondG{
+    transform-origin: 15.1% 89.5% ;
+    transform: rotate(0deg) ;
+    animation: rondG 6s linear infinite;
+}
+@keyframes rondG{
+    100% {-webkit-transform:rotate(-360deg);}
+}
+/* -------------------- ANIMATION Verres BACKGROUND------------------------- */
+.verreD{
+    transform-origin: 84.7% 87.3% ;
+    animation: verreD 1s infinite ease-out;
+}
+@keyframes verreD{
+    0% {
+        transform: translate(0);
+    }
+    5%{
+        -webkit-transform: translate(1%);
+        -webkit-transform: rotate(3deg);
+    }
+    10%{
+        -webkit-transform: translate(-1%);
+        -webkit-transform: rotate(-3deg);
+    }
+    15%{
+        -webkit-transform: translate(1%);
+        -webkit-transform: rotate(3deg);
+    }
+    20%{
+        -webkit-transform: translate(-1%);
+        -webkit-transform: rotate(-3deg);
+    }
+    50%{
+        -webkit-transform: translate(1%);
+        -webkit-transform: rotate(3deg);
+    }
+    100% {
+        -webkit-transform: translate(-1%);
+    }
+}
+.verreG{
+    transform-origin: 15.1% 89.5%  ;
+    animation: verreG 1s infinite ease-out;
+}
+@keyframes verreG{
+    0% {
+        transform: translate(0);
+    }
+    5%{
+        -webkit-transform: translate(-1%);
+        -webkit-transform: rotate(-3deg);
+    }
+    10%{
+        -webkit-transform: translate(1%);
+        -webkit-transform: rotate(3deg);
+    }
+    15%{
+        -webkit-transform: translate(-1%);
+        -webkit-transform: rotate(-3deg);
+    }
+    20%{
+        -webkit-transform: translate(1%);
+        -webkit-transform: rotate(3deg);
+    }
+    50%{
+        -webkit-transform: translate(-1%);
+        -webkit-transform: rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: translate(1%);
+    }
+}
+/* -------------------- ANIMATION des 3 points BACKGROUND------------------------- */
+.exclaD{
+    animation: exclaD 1s infinite ease-out;
+}
+@keyframes exclaD{
+    0%{-webkit-transform:translate(1%);}
+    70% {-webkit-transform:translate(-2%);}
+    100% {-webkit-transform:translate(-2%);}
+    0%{-webkit-transform:translate(-1%);}
+}
+.exclaG{
+    animation: exclaG 1s infinite ease-out;
+}
+@keyframes exclaG{
+    0%{-webkit-transform:translate(-1%);}
+    70% {-webkit-transform:translate(1%);}
+    100% {-webkit-transform:translate(1%);}
+    0%{-webkit-transform:translate(-1%);}
+}
+/* -------------------- ANIMATION FLECHE BACKGROUND------------------------- */
+.flecheD{
+    transform: translate(0);
+    animation: flecheD 1s linear infinite;
+}
+@keyframes flecheD{
+    98% {
+        -webkit-transform:translateX(-2px);
+        -webkit-transform:rotate(4deg);
+    }
+    100% {
+        -webkit-transform:translateX(0px);
+        -webkit-transform:rotate(0deg);
+    }
+}
+.flecheG{
+    transform: translate(0);
+    animation: flecheG 1s linear infinite;
+}
+@keyframes flecheG{
+    98% {
+        -webkit-transform:translateX(1px);
+        -webkit-transform:rotate(-2deg);
+    }
+    100% {
+        -webkit-transform:translateX(0px);
+        -webkit-transform:rotate(0deg);
+    }
 }
