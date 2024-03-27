@@ -274,14 +274,15 @@ body{
 #textPresentation h1 {
     font-family: var(--font-police);
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 40px 50px;
     text-align: center;
 }
 #textPresentation p {
+    font-size: var(--font-size);
     position: relative;
     line-height: 1.5;
-    letter-spacing: 3px;
+    letter-spacing: 2.2px;
     margin: 0 20px;
     margin-left: 15%;
     margin-right: 15%;
