@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
 /* ---------------------ROOT------------------------ */
 :root{
-    --font-police:font-family:'Tinos', serif;
+    --font-police:font-family 'Tinos', serif;
     --font-size:1.3rem;
     --color-text: #fefde5;
     --color-textS2: #333;
@@ -270,4 +270,46 @@ body{
         -webkit-transform:translateX(0px);
         -webkit-transform:rotate(0deg);
     }
+}
+/* --------------------Text de présentation avec logo------------------------- */
+#textPresentation h1 {
+    font-family: var(--font-police);
+    letter-spacing: 2px;
+    font-size: 2rem;
+    padding: 40px 50px;
+    text-align: center;
+}
+#textPresentation p {
+    position: relative;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    margin: 0 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    text-justify: distribute;
+}
+#textPresentation{
+    position: relative;
+    color: var(--color-text);
+    background-color: var(--bg-color);
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+}
+#textPresentation div {
+    display: block;
+    content: '';
+}
+/* -------------------LOGO---------------------- */
+
+#textPresentation img{
+    display: block;
+    position: relative;
+    border-radius: 40%;
+    margin-top: 50px;
+    margin-left: 15%;
+    float: left;
+    max-width: 256px;
+    shape-outside: content-box;
 }
