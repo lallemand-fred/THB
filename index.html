@@ -107,6 +107,26 @@
                 <form action="#">
                     <h2>Réservez ici :</h2>
                     <!-- --------------------- Nom de la réservation --------------------- -->
+
+                    <div class="reserv">
+                        <div class="input-box ">
+                            <label for="resto">Choisissez un restaurant :</label>
+                            <span class="icon"></span>
+                            <select name="" id="resto">
+                                <option value="option">Please choose an option</option>
+                                <optgroup class="restoColor" label="Province de Liège"></optgroup><hr />
+                                    <option value="Liege">HUGGYS 1 Liège</option>
+                                    <option value="Soumagne">HUGGYS 2 Soumagne</option>
+                                    <option value="Nandrin">HUGGYS 3 Nandrin</option>
+                                    <option value="Awans">HUGGYS 4 Awans</option>
+                                <optgroup class="restoColor" label="Province du Hainaut"></optgroup><hr />
+                                    <option value="Namur">HUGGYS 5 Gosselies</option>
+                                    <option value="Namur">HUGGYS 6 Charleroi</option>
+                                    <option value="Namur">HUGGYS 7 Gerpinnes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- --------------------- Nom de la réservation --------------------- -->
                     <div class="input-box">
                         <span class="icon"></span>
                         <label for="reserv" >Nom de la résevation :</label>
@@ -119,16 +139,10 @@
                         <input  id="inputPersonne" class="inputPersonne" type="number" placeholder="0" min="1" max="40" required>
                     </div>
                     <!-- ------------------------- Jour  / Mois  -------------------------- -->
-                    <div class="jourMoisHeures">
+                    <div class="input-box jourMoisHeures">
                         <label for="jour">Choisissez un jour :</label>
                         <input id="jour" type="date" required>
                     </div>
-                    <!--
-                    <div class="jourMoisHeures">
-                        <label>Choisissez un jour / un mois :</label>
-                        <input type="number" placeholder="Jour" max="31" required>
-                        <span> - </span><input type="number" placeholder="mois" max="12" required>
-                    </div> -->
                     <!-- ----------------------- Choix de la table ------------------------ -->
                     <div class="input-box choixTable">
                         <label>Choix de la table :</label>
@@ -158,7 +172,7 @@
                         <input type="email" placeholder="E-mail" required>
                     </div>
                     <div class="CG remember-forgot">
-                        <label><input class="ChekboxRemember" type="checkbox">Accepter les CG</label><br>
+                        <label><input class="ChekboxRemember" type="checkbox">J'accepte la <a class="confidentialite" href="https://www.resengo.com/Code/Legal/?CID=1549&SCID=8462&AID=1&RN_PartnerID=51&DBSUID=00000000-0000-0000-0000-000000000000&LC=FR&CACID=6&MCID=0&MSCID=0&DocumenttypeID=2" target="_blank" >politique de confidentialité</a> </label><br>
                         <button class="submitReserv" type="submit">Valider la réservation</button>
                     </div>
 
@@ -193,6 +207,10 @@
                 </form>
             </div>
         </section>
+        <aside>
+           <article>
+           </article>
+        </aside>
     </main>
 </body>
 </html>
