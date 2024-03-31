@@ -1,5 +1,6 @@
 /* -------------------- POLICE ----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+
 /* --------------------- ROOT ------------------------ */
 :root{
     --font-police:font-family 'Tinos', serif;
@@ -17,6 +18,7 @@
     list-style: none;
     text-decoration: none;
     font-family: var(--font-police);
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
@@ -49,6 +51,7 @@ nav ul{
     gap: 20px;
 }
 nav ul li a{
+    letter-spacing: 1px;
     color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
@@ -415,4 +418,188 @@ body{
 }
 .cardre:nth-child(3){
     transition-delay: 600ms;
+}
+/* -------------------- FORMULAIRE ----------------------- */
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(39, 33, 31);
+    flex-direction: column;
+}
+
+.selectFormBtn .btn{
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    color: #1e1918;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+#contacterBtn{
+    margin-left: 15px;
+}
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.restoColor{
+    background: #514C4BFF;
+    color: white;
+}
+.formBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 612px;
+    height: 600px;
+    overflow: hidden;
+    z-index: 2;
+}
+.reservContainer{
+    position: absolute;
+    left: 4px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    gap: 10px;
+}
+.contacterContainer{
+    position: absolute;
+    right: -620px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    gap: 10px;
+}
+.titleFom{
+    height: 130px;
+    border-radius:150px 150px 30px 30px;
+    background: rgb(122, 91, 46);
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0 30px 0;
+}
+.deuxForms{
+    display: flex;
+    gap: 10px;
+    padding: 0px 45px 0px 45px;
+}
+.inputField{
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.inputField:hover, .inputField:focus{
+    background: rgba(255, 255, 255, 0.25);
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.inputBox i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+.tables{
+    background: #514C4BFF;
+    color: white;
+    border-radius: 22px;
+}
+.textArea{
+    font-weight: 500;
+    border: none;
+    color: var(--color-text);
+    background: #FFFFFF33 ;
+    padding-top: 10px;
+    padding-left: 10px;
+    letter-spacing: .8px;
+    font-size: 16px;
+    height: 150px;
+    width: 600px;
+    border-radius: 30px;
+    resize: none;
+}
+.submit{
+    font-size: 25px;
+    font-weight: 700;
+    color:#ffffff;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgb(122, 91, 46);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background: rgb(148, 110, 54);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.politique[type="checkbox"] + label::before{
+    content:"";
+    display:inline-block;
+    width:12px;
+    height:12px;
+    background: #640000;
+    border-radius:12px;
+}
+.politique[type="checkbox"]:checked + label::before{
+    background: #259125;
+}
+.confidentialité{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.confidentialité .one{
+    display: flex;
+    gap: 5px;
+}
+.two label a{
+    text-decoration: none;
+    color: #fff;
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+
+.politiqueA{
+    text-decoration-line: underline ;
+    color: white;
+}
+.confidentialite {
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    list-style: none;
+    text-align: center;
 }
