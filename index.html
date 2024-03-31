@@ -5,6 +5,7 @@
     <title>The Huggi's bar</title>
     <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png">
     <link rel="stylesheet" href="./style.css">
+    <script async defer src="./App.js"></script>
 </head>
 <body>
     <!-- ------------------------------------------ l'Entête de page ------------------------ -->
@@ -17,7 +18,7 @@
                 <li><a class="deux-linges" href="#">Accueil</a></li>
                 <li><a class="deux-linges" href="#laCarte">La carte</a></li>
                 <li><a class="deux-linges" href="#reservation">Réservation</a></li>
-                <li><a class="deux-linges" href="#contact">Contact</a></li>
+                <li><a class="deux-linges" href="#contac">Contact</a></li>
             </ul>
         </nav>
         <div id="separation01"></div>
@@ -100,117 +101,89 @@
                 </div>
             </div>
         </section>
-        <!-- --------------------------------- Formulaire réservation -------------------- -->
+        <!----------------------------- Btn de formulaire de réservation ou contact ----------------------------------->
         <div id="reservation"></div>
-        <section class="formulaireReservation">
-            <div class="from-box pageReservation">
-                <form action="#">
-                    <h2>Réservez ici :</h2>
-                    <!-- --------------------- Nom de la réservation --------------------- -->
-
-                    <div class="reserv">
-                        <div class="input-box ">
-                            <label for="resto">Choisissez un restaurant :</label>
-                            <span class="icon"></span>
-                            <select name="" id="resto">
-                                <option value="option">Please choose an option</option>
-                                <optgroup class="restoColor" label="Province de Liège"></optgroup><hr />
-                                    <option value="Liege">HUGGYS 1 Liège</option>
-                                    <option value="Soumagne">HUGGYS 2 Soumagne</option>
-                                    <option value="Nandrin">HUGGYS 3 Nandrin</option>
-                                    <option value="Awans">HUGGYS 4 Awans</option>
-                                <optgroup class="restoColor" label="Province du Hainaut"></optgroup><hr />
-                                    <option value="Namur">HUGGYS 5 Gosselies</option>
-                                    <option value="Namur">HUGGYS 6 Charleroi</option>
-                                    <option value="Namur">HUGGYS 7 Gerpinnes</option>
-                            </select>
+        <section class="wrapper">
+            <div class="selectForm">
+                <div class="selectFormBtn">
+                    <button class="btn white-btn" id="reservBtn" onclick="reserv()">Réservation</button>
+                    <button class="btn" id="contacterBtn" onclick="contact()">Contact</button>
+                </div>
+            </div>
+            <!----------------------------- Form box ----------------------------------->
+            <section class="formBox">
+                <!------------------- Reservation -------------------------->
+                <form class="reservContainer" action="#" id="reserv">
+                    <div class="top">
+                        <h2 class="titleFom ">Réservation</h2>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" class="inputField" placeholder="Nom de la réservation" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" class="inputField" placeholder="Email" required>
+                    </div>
+                    <div class="inputBox">
+                        <select name="rest" class="inputField" required>
+                            <option class="restoColor" value="option">Choisissez un restaurant</option>
+                            <optgroup class="restoColor" label="Province de Liège"></optgroup><hr />
+                            <option class="restoColor" value="Liege">HUGGYS 1 Liège</option>
+                            <option class="restoColor" value="Soumagne">HUGGYS 2 Soumagne</option>
+                            <option class="restoColor" value="Nandrin">HUGGYS 3 Nandrin</option>
+                            <option class="restoColor" value="Awans">HUGGYS 4 Awans</option>
+                            <optgroup class="restoColor" label="Province du Hainaut"></optgroup><hr />
+                            <option class="restoColor" value="Namur">HUGGYS 5 Gosselies</option>
+                            <option class="restoColor" value="Namur">HUGGYS 6 Charleroi</option>
+                            <option class="restoColor" value="Namur">HUGGYS 7 Gerpinnes</option>
+                        </select>
+                    </div>
+                    <div class="inputBox pesrsonne">
+                        <input  class="inputField" type="number" placeholder="Nombre de personnes 0" min="1" max="40" required>
+                    </div>
+                    <input class="inputField dateStyle" type="date"  placeholder="Choisissez un jour" required>
+                    </div>
+                    <div class="inputBox">
+                        <select class="inputField" required>
+                            <option class="tables" value="option">Choix de la table</option>
+                            <optgroup class="tables" label="Type de table"></optgroup><hr />
+                            <option class="tables">Table normal</option>
+                            <option class="tables">Table haute</option>
+                            <option class="tables">Bar</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" class="submit" value="Valider la réservation">
+                    </div>
+                    <div class="confidentialite">
+                        <input class="politique" type="checkbox" required> <label> J'accepte la <a class="politiqueA" href="https://www.resengo.com/Code/Legal/?CID=1549&SCID=8462&AID=1&RN_PartnerID=51&DBSUID=00000000-0000-0000-0000-000000000000&LC=FR&CACID=6&MCID=0&MSCID=0&DocumenttypeID=2" target="_blank" >politique de confidentialité</a></label>
+                    </div>
+                </form>
+                <div id="contac"></div>
+                <!------------------- Contact -------------------------->
+                <form class="contacterContainer" action="#" id="contacter">
+                    <div class="top">
+                        <h2 class="titleFom">Contactez-nous</h2>
+                    </div>
+                    <div class="deuxForms ">
+                        <div class="inputBox">
+                            <input type="text" class="inputField" placeholder="Nom" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" class="inputField" placeholder="Prénom" required>
                         </div>
                     </div>
-                    <!-- --------------------- Nom de la réservation --------------------- -->
-                    <div class="input-box">
-                        <span class="icon"></span>
-                        <label for="reserv" >Nom de la résevation :</label>
-                        <input  id="reserv" type="name" placeholder="Nom" required>
+                    <div class="inputBox">
+                        <input type="text" class="inputField" placeholder="Email" required>
                     </div>
-                    <!-- --------------------- Nombre de personnes  ---------------------- -->
-                    <div class="input-box personne">
-                        <span class="icon"></span>
-                        <label for="inputPersonne" >Nombre de personnes :</label>
-                        <input  id="inputPersonne" class="inputPersonne" type="number" placeholder="0" min="1" max="40" required>
+                    <div class="inputBox texteZone">
+                        <textarea spellcheck="true"  class="textArea" type = "text"  name="textarea" placeholder="Tapez votre message ici..." required></textarea>
                     </div>
-                    <!-- ------------------------- Jour  / Mois  -------------------------- -->
-                    <div class="input-box jourMoisHeures">
-                        <label for="jour">Choisissez un jour :</label>
-                        <input id="jour" type="date" required>
-                    </div>
-                    <!-- ----------------------- Choix de la table ------------------------ -->
-                    <div class="input-box choixTable">
-                        <label>Choix de la table :</label>
-                        <input type="radio" name="type" id="tableNormal">
-                        <label for="tableNormal">Table normal</label>
-
-                        <input type="radio" name="type" id="tableHaute">
-                        <label for="tableHaute">Table haute</label>
-
-                        <input type="radio" name="type" id="bar">
-                        <label for="bar">Bar</label>
-                    </div>
-                    <!--
-                    <div class="input-box choixTable">
-                        <span class="icon"></span>
-                        <label>Choix de la table :</label>
-                        <select  name="" required>
-                            <option value=""> </option>
-                            <option value="">Table normal</option>
-                            <option value="">Table haute</option>
-                            <option value="">Bar</option>
-                        </select>
-                    </div> -->
-                    <!-- ------------------------ E-mail réservation ---------------------- -->
-                    <div class="input-box email">
-                        <span class="icon"></span>
-                        <input type="email" placeholder="E-mail" required>
-                    </div>
-                    <div class="CG remember-forgot">
-                        <label><input class="ChekboxRemember" type="checkbox">J'accepte la <a class="confidentialite" href="https://www.resengo.com/Code/Legal/?CID=1549&SCID=8462&AID=1&RN_PartnerID=51&DBSUID=00000000-0000-0000-0000-000000000000&LC=FR&CACID=6&MCID=0&MSCID=0&DocumenttypeID=2" target="_blank" >politique de confidentialité</a> </label><br>
-                        <button class="submitReserv" type="submit">Valider la réservation</button>
-                    </div>
-
-                </form>
-            </div>
-        </section>
-        <div id="contact"></div>
-        <!-- ---------------------------------- Formulaire Contact ----------------------- -->
-        <section class="formulaireContact">
-            <div class="from-box pageContact">
-                <h2>Contactez-nous :</h2>
-                <form action="#">
-                    <div class="input-box nomPrenom">
-                    <!-- --------------------- Nom de la réservation --------------------- -->
-                        <span class="icon"></span>
-                        <input type="name" placeholder="Nom" required>
-                        <input type="name" placeholder="Prénom" required>
-                    </div>
-                    <!-- ------------------------ E-mail Contact ------------------------- -->
-                    <div class="input-box email">
-                        <span class="icon"></span>
-                        <input type="email" placeholder="E-mail" required>
-                    </div>
-                    <!-- ---------------------- Contact formulaire ----------------------- -->
-                    <div class="input-box message">
-                        <span class="icon"></span>
-                        <textarea type = "text" class="field" name="message" placeholder="Tapez votre message ici..." required></textarea>
-                    </div>
-                    <div class="remember-forgot">
-                        <button class="submitReserv" type="submit">Soumettre</button>
+                    <div class="inputBox">
+                        <input type="submit" class="submit" value="Contactez-nous">
                     </div>
                 </form>
-            </div>
+            </section>
         </section>
-        <aside>
-           <article>
-           </article>
-        </aside>
     </main>
 </body>
 </html>
