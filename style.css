@@ -11,6 +11,7 @@
     --bg-color: #271c19;
     --bg-colorS2: #302226;
     --bg-colorS3: #27211F;
+    --bg-colorFoot: #181818;
 }
 /* -------------------HTML DOOM---------------------- */
 *{
@@ -607,4 +608,110 @@ body{
     list-style: none;
     text-align: center;
 }
-/* -------------------- FOOTERS ----------------------- */
+/* -------------------- FOOTER ----------------------- */
+
+.footer{
+    margin-top: 0px;
+    width: 100vw;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background: linear-gradient(to top, var(--bg-colorFoot), #000000);
+    color: var(--color-text);
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.footer div h3{
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.boite1{
+    letter-spacing: 1px;
+    padding-left: 5%;
+}
+.icons {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.icons img{
+    transition: 0.2s ease-in-out;
+}
+.boite1 div a img{
+    height: 20px;
+    width: 20px;
+}
+.boite1 div a img:hover{
+    background: var(--clr);
+    border-radius: 2px;
+}
+.boite1 div a img.insta:hover{
+    background: linear-gradient(45deg, #ec6739, #ab2f9d,#2e1ce5);
+}
+.boite2{
+    flex-grow: 2;
+}
+/* -------BTN-INSCRIVEZ-VOUS------- */
+.mailNewLetter{
+    font-weight: 550;
+    font-size: 19px;
+    width: 350px;
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+}
+.btnInscrivezVous{
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.btnInscrivezVous:hover, .boite3 button:hover{
+    transform: scale(1.1);
+    background: #33333393;
+}
+.boite3 a{
+    color: var(--color-text);
+}
+.boite3 {
+    letter-spacing: 1px;
+    padding-right: 5%;
+}
+/* -------BTN-CONTACT------- */
+.boite3 input{
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+.boite3 button{
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 2px;
+    transition: all 0.4s ease-in-out;
+}
+.copyr{
+    background: var(--bg-colorFoot);
+    text-align: center;
+    color: var(--color-text);
+    font-size: 12px;
+    padding: 5px;
+}
