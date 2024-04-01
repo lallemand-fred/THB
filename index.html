@@ -17,8 +17,8 @@
             <ul class="nav">
                 <li><a class="deux-linges" href="#">Accueil</a></li>
                 <li><a class="deux-linges" href="#laCarte">La carte</a></li>
-                <li><a class="deux-linges" href="#reservation">Réservation</a></li>
-                <li><a class="deux-linges" href="#contac">Contact</a></li>
+                <li><a class="deux-linges" onclick="reserv()" href="#reservation">Réservation</a></li>
+                <li><a class="deux-linges" onclick="contact()" href="#contacterBtn">Contact</a></li>
             </ul>
         </nav>
         <div id="separation01"></div>
@@ -211,7 +211,8 @@
         <div class="boite3">
             <h3>Contact</h3>
             <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
-            <button class="btnContact-popup"><a href="#formulaire">Contactez-nous</a></button>
+            <button class="btnContact-popup btn" id="contacterBt" onclick="contact()"><a href="#contacterBtn">Contactez-nous</a></button>
+
         </div>
     </footer>
     <div class="copyr">© Copyright 2023 The Huggy’s Bar - Ce site est un fake!!!</div>
