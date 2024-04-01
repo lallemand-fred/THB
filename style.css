@@ -10,6 +10,7 @@
     --color-text-Hover: #e4ab4e;
     --bg-color: #271c19;
     --bg-colorS2: #302226;
+    --bg-colorS3: #27211F;
 }
 /* -------------------HTML DOOM---------------------- */
 *{
@@ -420,17 +421,20 @@ body{
     transition-delay: 600ms;
 }
 /* -------------------- FORMULAIRE ----------------------- */
-
-
+#reservation{
+    position: relative;
+    width: auto;
+    height: 150px;
+    background: linear-gradient(to bottom, var(--bg-colorS2), var(--bg-colorS3) )  ;
+}
 .wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(39, 33, 31);
+    background: var(--bg-colorS3);
     flex-direction: column;
 }
-
 .selectFormBtn .btn{
     letter-spacing: 0.5px;
     font-size: 25px;
@@ -603,3 +607,4 @@ body{
     list-style: none;
     text-align: center;
 }
+/* -------------------- FOOTERS ----------------------- */
