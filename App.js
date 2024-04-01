@@ -1,6 +1,6 @@
 
 
-// ----------------------------------Animations déplacement et blur-------------------------------
+// ----------------------------------Animations déplacement et blur--------------------------------
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entre) => {
         console.log(entre)
@@ -15,7 +15,7 @@ const observer = new IntersectionObserver((entries) => {
 const slideElements = document.querySelectorAll('.slidG, .slidD, .slidB, .slidH, .slidO')
 slideElements.forEach((el) => observer.observe(el));
 
-// ----------------------------------Pages mouvement Réservation & contact-------------------------------
+// ----------------------------------Pages mouvement Réservation & contact--------------------------------
     var resBtn = document.getElementById("reservBtn");
     var contBtn = document.getElementById("contacterBtn");
     var res = document.getElementById("reserv");

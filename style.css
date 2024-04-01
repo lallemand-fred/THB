@@ -653,7 +653,7 @@ body{
 .boite2{
     flex-grow: 2;
 }
-/* -------BTN-INSCRIVEZ-VOUS------- */
+/* -------BTN-INSCRIVEZ-VOUS-------- */
 .mailNewLetter{
     font-weight: 550;
     font-size: 19px;
@@ -665,6 +665,8 @@ body{
     margin-bottom: 15px;
     outline: none;
     border: none;
+    background-color: #514C4BFF;
+    color: white;
 }
 .btnInscrivezVous{
     background: transparent;
