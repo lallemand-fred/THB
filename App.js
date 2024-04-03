@@ -36,4 +36,29 @@ slideElements.forEach((el) => observer.observe(el));
     res.style.opacity = 0;
     cont.style.opacity = 1;
 }
+// -----------------------------------menu burger-------------------------------
+let menuToggle = document.querySelector('.menuToggle')
+let header = document.querySelector('header')
+menuToggle.onclick = function(){
+    header.classList.toggle('active')
+}
+const links = document.querySelectorAll("nav li");
+
+links.forEach((link) => {
+    link.addEventListener("click", () => {
+        header.classList.remove('active');
+    });
+});
+// -----------------------------------menu selection active-------------------------------
+
+let list = document.querySelectorAll('.nav li')
+function active(){
+    list.forEach((i) =>
+        i.classList.remove('active'))
+    this.classList.add('active')
+}
+list.forEach((i) => i.addEventListener('click',active ))
+
+
+
 
