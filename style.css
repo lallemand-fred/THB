@@ -21,6 +21,7 @@
     text-decoration: none;
     font-family: var(--font-police);
     box-sizing: border-box;
+    /*border: solid 1px red;*/
 }
 html{
     scroll-behavior: smooth;
@@ -485,15 +486,7 @@ body{
     transition: .5s ease-in-out;
     gap: 10px;
 }
-.contacterContainer{
-    position: absolute;
-    right: -620px;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease-in-out;
-    gap: 10px;
-}
+
 .titleFom{
     height: 130px;
     border-radius:150px 150px 30px 30px;
@@ -502,11 +495,6 @@ body{
     font-size: 30px;
     text-align: center;
     padding: 50px 0 30px 0;
-}
-.deuxForms{
-    display: flex;
-    gap: 10px;
-    padding: 0px 45px 0px 45px;
 }
 .inputField{
     font-size: 18px;
@@ -536,37 +524,6 @@ body{
     background: #514C4BFF;
     color: white;
     border-radius: 22px;
-}
-.textArea{
-    font-weight: 500;
-    border: none;
-    color: var(--color-text);
-    background: #FFFFFF33 ;
-    padding-top: 10px;
-    padding-left: 10px;
-    letter-spacing: .8px;
-    font-size: 16px;
-    height: 150px;
-    width: 600px;
-    border-radius: 30px;
-    resize: none;
-}
-.submit{
-    font-size: 25px;
-    font-weight: 700;
-    color:#ffffff;
-    height: 45px;
-    width: 100%;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background: rgb(122, 91, 46);
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-.submit:hover{
-    background: rgb(148, 110, 54);
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 .politique[type="checkbox"] + label::before{
     content:"";
@@ -608,6 +565,54 @@ body{
     list-style: none;
     text-align: center;
 }
+/* ------------------Contact formulaire--------------------- */
+.contacterContainer{
+    position: absolute;
+    right: -620px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    gap: 10px;
+}
+.deuxForms{
+    display: flex;
+    gap: 10px;
+    padding: 0px 45px 0px 45px;
+}
+.textArea{
+    font-weight: 500;
+    border: none;
+    font-family: var(--font-police);
+    color: var(--color-text);
+    background: #FFFFFF33 ;
+    padding-top: 10px;
+    padding-left: 45px;
+    letter-spacing: 0.8px;
+    font-size: 18px;
+    height: 150px;
+    width: 600px;
+    border-radius: 30px;
+    resize: none;
+}
+.submit{
+    font-size: 25px;
+    font-weight: 700;
+    color:#ffffff;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgb(122, 91, 46);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background: rgb(148, 110, 54);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
 /* -------------------- FOOTER ----------------------- */
 .footer{
     margin-top: 0px;
@@ -679,7 +684,6 @@ body{
     transition: all 0.4s ease-in-out;
 }
 .btnInscrivezVous:hover, .boite3 button:hover{
-    transform: scale(1.1);
     background: #33333393;
 }
 .boite3 a{
@@ -780,3 +784,306 @@ body{
     filter: blur(0);
 }
 /* -----------------------FIN des animations ----------------------- */
+/* -----------------------RESPONSIVE----------------------- */
+@media (max-width : 800px){
+    /* -----------------------NavBar ----------------------- */
+    header .logoNav{
+        padding-left: 10px;
+    }
+    header ul li a{
+        margin-right: 10px;
+    }
+    /* -----------------------Animations ----------------------- */
+    .rondD{
+        transform-origin: 85.5% 87.4% ;
+        transform: rotate(0deg);
+        animation: rondD 6s linear infinite;
+    }
+    .rondG{
+        transform-origin: 14.6% 89% ;
+        transform: rotate(0deg) ;
+        animation: rondG 6s linear infinite;
+    }
+    /* -----------------------Bord flou de l'Image principal------------------------------- */
+    #secImageAccueil::before{
+        height: 555px;
+        width: 450px;
+        box-shadow: inset 0em 0em 20px 20px var(--bg-color);
+    }
+    /* -----------------------Image principal------------------------------- */
+    #secImageAccueil{
+        height: 555px;
+    }
+    #secImageAccueil img{
+        width: clamp(150px, 100%, 450px);
+    }
+    #textPresentation h1 {
+        font-size: 1.7rem;
+        padding: 40px 20px;
+    }
+    #textPresentation p {
+        letter-spacing: 3px;
+        margin: 0 50px;
+    }
+    /* ------------LOGO--------------- */
+    #textPresentation img{
+        border-radius: 100%;
+        max-width: 200px;
+    }
+    /* ------------FOOTER--------------- */
+    .footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+    }
+    .boite1{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .boite2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    /* -------BTN-INSCRIVEZ-VOUS-------- */
+    .btnInscrivezVous:hover, .boite3 button:hover{
+        transform: scale(1.1);
+        background: #33333393;
+    }
+    .boite3 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}
+@media (max-width :650px ){
+    .menuToggle{
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 0 10px #fff ;
+    }
+    .menuToggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    header.active .menuToggle::before{
+        transform:  translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+    header.active .menuToggle::after{
+        transform:  translateY(0px) rotate(315deg);
+        box-shadow: 0 0 #fff;
+    }
+    header.active .menuToggle:hover::before, header.active .menuToggle:hover::after{
+        background-color: #e4ab4e;
+    }
+    .menuToggle:hover{
+        color: #e4ab4e;
+    }
+    header ul{
+        display: none;
+    }
+    header.active ul{
+        z-index: 1000;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 72px);
+        left: 0;
+        top: 72px;
+        backdrop-filter: blur(20px);
+        background: #271c19da;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+    header.active ul li a{
+        font-size: 2em;
+    }
+    .logoNav img {
+        width: 40px;
+    }
+    #separation01{
+        height: 60px;
+    }
+    #separation01::after{
+        top: 0px;
+    }
+    #secImageAccueil::before{
+        height: 315px;
+        width: 250px;
+    }
+    /* -----------------------Image principal------------------------------- */
+    #secImageAccueil{
+        height: 315px;
+    }
+    #secImageAccueil img{
+        width: clamp(150px, 100%, 250px);
+    }
+    #textPresentation h1 {
+        order: 1;
+        letter-spacing: 1px;
+        font-size: 16px;
+        padding: 0px 50px;
+        margin-top: -5px;
+        padding-bottom: 15px;
+    }
+    #textPresentation p {
+        order: 2;
+        display: inline-block;
+        letter-spacing: 1.6px;
+        margin: 0px 50px;
+        margin-top: 0px;
+    }
+    #textPresentation{
+        overflow-x: hidden;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* ------------LOGO dans le texte------------- */
+    #textPresentation img{
+        display: flex;
+        border-radius: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: -20px;
+        text-align: center;
+        float: none;
+        width:  150px;
+        height: auto;
+    }
+    .menu3{
+        padding-top: 0px;
+        padding-bottom: 100px;
+    }
+    /* ------------------formulaire Réservation--------------------- */
+    #reservation{
+        height: 100px;
+    }
+    .wrapper{
+        min-height: 90vh;
+    }
+    .selectFormBtn .btn{
+        letter-spacing: 0.2px;
+        font-size: 22px;
+        width: 150px;
+    }
+    .titleFom{
+        font-size: 25px;
+        width: 60%;
+    }
+    .inputBox{
+        display: flex;
+        justify-content: center;
+    }
+    .inputField{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        height: 40px;
+        width: 60%;
+    }
+    .submit{
+        width: 60%;
+    }
+    .politique[type="checkbox"] + label::before{
+        width:12px;
+        height:12px;
+    }
+    .confidentialite {
+        letter-spacing: 0.2px;
+        font-size: 1rem;
+    }
+    /* ------------------Contact formulaire--------------------- */
+    .contacterContainer{
+        position: absolute;
+        right: -620px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        transition: .5s ease-in-out;
+        gap: 10px;
+    }
+    .deuxForms{
+        display: flex;
+        margin: 0px ;
+        padding: 0px -650px;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .nom{
+        transform: translate(25px);
+
+    }
+    .prenom{
+        transform: translate(-25px);
+    }
+    .textArea{
+        padding-left: 10px;
+        font-size: 16px;
+        height: 130px;
+        width: 60%;
+    }
+    /* ------------------Footer--------------------- */
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* -------BTN-INSCRIVEZ-VOUS------- */
+    .mailNewLetter{
+        font-size: 14px;
+        width: 250px;
+        height: 25px;
+        margin-top: 10px;
+    }
+    .btnInscrivezVous{
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+    .boite3 {
+        margin-top: 20px;
+        padding-right: 0%;
+    }
+    /* -------BTN-CONTACT------- */
+
+    .copyr{
+        padding: 0px;
+        padding-bottom: 15px;
+    }
+}
