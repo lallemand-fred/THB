@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>The Huggi's bar</title>
+    <title>The Huggy's bar</title>
     <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png">
     <link rel="stylesheet" href="./style.css">
     <script async defer src="./App.js"></script>
@@ -38,12 +38,12 @@
         <img class="imageTHBEER rondG" src="./media/backgroundTHBEER/gauche/THBEERRond50cl.png" alt="">
         <img class="imageTHBEER verreG" src="./media/backgroundTHBEER/gauche/THBEERVerre50cl.png" alt="">
     </section>
-    <!-- --------------------------------------- Présentation ----------------------------- -->
+    <!-- --------------------------------------- Texte de présentation ----------------------------- -->
     <main>
         <section id="presentation">
             <div id="textPresentation">
-                <h1 class="">L’UNIVERS DU HUGGY’S BAR</h1>
-                <div class="">
+                <h1 class="slidO">L’UNIVERS DU HUGGY’S BAR</h1>
+                <div class="slidG">
                     <img src="./media/logoHUGGYS01.png" alt="Logo restaurant">
                 </div>
                 <p class="slidD">
@@ -63,7 +63,7 @@
                 </p>
             </div>
         </section>
-        <!-- --------------------------------- Menu de la carte 3 choix----------------------------- -->
+        <!-- ---------------------------- Menu 3 cartes choix BURGER BEER STARTERS ---------------------------- -->
         <div id="laCarte"></div>
         <section class="menu3">
             <div class="containerMenu">
@@ -161,7 +161,8 @@
                 </form>
                 <div id="contac"></div>
                 <!------------------- Contact -------------------------->
-                <form class="contacterContainer" action="#" id="contacter">
+                <form class="contacterContainer" action="#contacter" method="POST" id="contacter">
+                    <input type="hidden" name="_subject">
                     <div class="top inputBox">
                         <h2 class="titleFom">Contactez-nous</h2>
                     </div>
@@ -180,7 +181,7 @@
                         <textarea spellcheck="true"  class="textArea" type = "text"  name="textarea" placeholder="Tapez votre message ici..." required></textarea>
                     </div>
                     <div class="inputBox">
-                        <input type="submit" class="submit" value="Contactez-nous">
+                        <button type="submit" class="submit">Contactez-nous</button>
                     </div>
                 </form>
             </section>
