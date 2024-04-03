@@ -11,7 +11,7 @@
     <!-- ------------------------------------------ l'Entête de page ------------------------ -->
     <header>
         <!-- ------------------------------------------- Navbar ----------------------------- -->
-        <nav>
+        <nav class="navbar" role="navigation">
             <a href="#secImageAccueil" class="logoNav"><img src="./media/logoHUGGYS01Ptit.png" alt=""></a>
             <div class="menuToggle"></div>
             <ul class="nav">
@@ -21,23 +21,23 @@
                 <li><a class="deux-linges" onclick="contact()" href="#contacterBtn">Contact</a></li>
             </ul>
         </nav>
-        <div id="separation01"></div>
-        <!-- -------------------------------------- Images Accueil----------------------------- -->
-        <section id="secImageAccueil">
-            <!-- ---------------------------- Image Fond Accueil vide----------------------------- -->
-            <img class="imageTHBEER" src="./media/backgroundTHBEER/THBEER01.png" alt="">
-            <!-- --------------------------------- Images Droite----------------------------- -->
-            <img class="imageTHBEER flecheD" src="./media/backgroundTHBEER/droite/THBEERFlècheD.png" alt="">
-            <img class="imageTHBEER exclaD" src="./media/backgroundTHBEER/droite/THBEERExclamationD.png" alt="">
-            <img class="imageTHBEER rondD" src="./media/backgroundTHBEER/droite/THBEERRond25cl.png" alt="">
-            <img class="imageTHBEER verreD" src="./media/backgroundTHBEER/droite/THBEERVerre25cl.png" alt="">
-            <!-- --------------------------------- Images Gauche----------------------------- -->
-            <img class="imageTHBEER flecheG" src="./media/backgroundTHBEER/gauche/THBEERFlècheG.png" alt="">
-            <img class="imageTHBEER exclaG" src="./media/backgroundTHBEER/gauche/THBEERExclamationG.png" alt="">
-            <img class="imageTHBEER rondG" src="./media/backgroundTHBEER/gauche/THBEERRond50cl.png" alt="">
-            <img class="imageTHBEER verreG" src="./media/backgroundTHBEER/gauche/THBEERVerre50cl.png" alt="">
-        </section>
     </header>
+    <div id="separation01"></div>
+    <!-- -------------------------------------- Images Accueil----------------------------- -->
+    <section id="secImageAccueil">
+        <!-- ---------------------------- Image Fond Accueil vide----------------------------- -->
+        <img class="imageTHBEER" src="./media/backgroundTHBEER/THBEER01.png" alt="">
+        <!-- --------------------------------- Images Droite----------------------------- -->
+        <img class="imageTHBEER flecheD" src="./media/backgroundTHBEER/droite/THBEERFlècheD.png" alt="">
+        <img class="imageTHBEER exclaD" src="./media/backgroundTHBEER/droite/THBEERExclamationD.png" alt="">
+        <img class="imageTHBEER rondD" src="./media/backgroundTHBEER/droite/THBEERRond25cl.png" alt="">
+        <img class="imageTHBEER verreD" src="./media/backgroundTHBEER/droite/THBEERVerre25cl.png" alt="">
+        <!-- --------------------------------- Images Gauche----------------------------- -->
+        <img class="imageTHBEER flecheG" src="./media/backgroundTHBEER/gauche/THBEERFlècheG.png" alt="">
+        <img class="imageTHBEER exclaG" src="./media/backgroundTHBEER/gauche/THBEERExclamationG.png" alt="">
+        <img class="imageTHBEER rondG" src="./media/backgroundTHBEER/gauche/THBEERRond50cl.png" alt="">
+        <img class="imageTHBEER verreG" src="./media/backgroundTHBEER/gauche/THBEERVerre50cl.png" alt="">
+    </section>
     <!-- --------------------------------------- Présentation ----------------------------- -->
     <main>
         <section id="presentation">
@@ -114,7 +114,7 @@
             <section class="formBox slidO">
                 <!------------------- Reservation -------------------------->
                 <form class="reservContainer" action="#" id="reserv">
-                    <div class="top">
+                    <div class="top inputBox">
                         <h2 class="titleFom ">Réservation</h2>
                     </div>
                     <div class="inputBox">
@@ -140,7 +140,8 @@
                     <div class="inputBox pesrsonne">
                         <input  class="inputField" type="number" placeholder="Nombre de personnes 0" min="1" max="40" required>
                     </div>
-                    <input class="inputField dateStyle" type="date"  placeholder="Choisissez un jour" required>
+                    <div class="inputBox">
+                        <input class="inputField dateStyle" type="date"  placeholder="Choisissez un jour" required>
                     </div>
                     <div class="inputBox">
                         <select class="inputField" required>
@@ -161,14 +162,14 @@
                 <div id="contac"></div>
                 <!------------------- Contact -------------------------->
                 <form class="contacterContainer" action="#" id="contacter">
-                    <div class="top">
+                    <div class="top inputBox">
                         <h2 class="titleFom">Contactez-nous</h2>
                     </div>
                     <div class="deuxForms ">
-                        <div class="inputBox">
+                        <div class="inputBox nom">
                             <input type="text" class="inputField" placeholder="Nom" required>
                         </div>
-                        <div class="inputBox">
+                        <div class="inputBox prenom">
                             <input type="text" class="inputField" placeholder="Prénom" required>
                         </div>
                     </div>
@@ -212,7 +213,6 @@
             <h3>Contact</h3>
             <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
             <button class="btnContact-popup btn" id="contacterBt" onclick="contact()"><a href="#contacterBtn">Contactez-nous</a></button>
-
         </div>
     </footer>
     <div class="copyr">© Copyright 2023 The Huggy’s Bar - Ce site est un fake!!!</div>
