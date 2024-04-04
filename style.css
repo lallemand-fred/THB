@@ -991,6 +991,7 @@ body{
     }
     .wrapper{
         min-height: 90vh;
+        width: 100%;
     }
     .selectFormBtn .btn{
         letter-spacing: 0.2px;
