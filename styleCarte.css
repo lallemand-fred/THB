@@ -2,12 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
 /* ---------------------ROOT------------------------ */
 :root{
-    --font-polic:font-family 'Tinos', serif;
+    --font-polic:font-family  'Tinos', serif;
     --font-size:1.3rem;
     --color-text: #fefde5;
+    --color-textS2: #333;
+    --color-text-Hover: #e4ab4e;
+    --bg-color: #271c19;
+    --bg-colorS2: #302226;
+    --bg-colorFoot: #181818;
 }
 /* -------------------HTML DOOM---------------------- */
 *, ::before, ::after{
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -17,4 +23,172 @@
 }
 html{
     scroll-behavior: smooth;
+}
+/* -------------------- NAVBAR ----------------------- */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    background: linear-gradient( to bottom, rgb(39,28,25), transparent);
+}
+nav .logoNav{
+    position: relative;
+    max-width: 60px;
+    padding-left: 20px;
+}
+nav .logoNav img{
+    max-width: 60px;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a{
+    letter-spacing: 1px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+/* ------------------ NAVBAR EFFECT --------------------- */
+nav ul li.active a,
+nav ul li:hover a{
+    color: var(--color-text-Hover);
+}
+.deux-linges{
+    text-decoration: none;
+    position: relative;
+    color: var(--color-text);
+}
+.deux-linges::before, .deux-linges::after{
+    content: '';
+    position: absolute;
+    height: 1%;
+    background: var(--color-text-Hover);
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all 0.2s ease-in-out;
+    filter: blur(5px)
+}
+.deux-linges::before{
+    width: 80%;
+    bottom: 0;
+}
+.deux-linges::after{
+    bottom: -7px;
+    width: 40%;
+}
+.deux-linges:hover::before, .deux-linges:hover::after{
+    height: 1%;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+    filter: blur(0px);
+}
+.deux-linges::before, .deux-linges:hover::after {
+    transition-delay: 0.1s;
+}
+.deux-linges:hover::before {
+    transition-delay: 0s;
+}
+/* -------------------Corps général------------------------ */
+body{
+    background: var(--color-text-Hover);
+    font-family: var(--font-polic);
+    color: var(--color-text);
+}
+.titrepage{
+    background: var(--color-textS2);
+    color: var(--color-text);
+    margin-bottom: 30px;
+    padding: 90px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.titrepage>h1{
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.titrepage>h4{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.carte{
+    padding: 0 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-gap: 20px 40px;
+}
+.carteItems{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .6);
+    transition: .2s ease-in-out;
+    background: var(--color-textS2);
+}
+.carteItems img{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+h1{
+    grid-column: 1/-1;
+    text-align: center;
+}
+.carte__details{
+    padding: 20px 30px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.carte__detailsPrix{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.carte__detailsPrix>h2,h3{
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.carte__detailsLien>h3{
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.prix{
+    text-align: right;
+}
+.carte__details>p{
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+    letter-spacing: .8px;
+}
+.carte__detailsLien>a{
+    color: #fefde57e;
+    transition: all .2s ease-in-out;
+}
+.carte__detailsLien>a:hover{
+    color: var(--color-text-Hover);
 }
