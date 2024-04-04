@@ -861,6 +861,7 @@ body{
     }
 }
 @media (max-width :650px ){
+    /* ----------------------- Navbar -------------------------- */
     .menuToggle{
         position: relative;
         width: 30px;
@@ -928,6 +929,7 @@ body{
     .logoNav img {
         width: 40px;
     }
+    /* -------------------- séparation ----------------------------- */
     #separation01{
         height: 60px;
     }
