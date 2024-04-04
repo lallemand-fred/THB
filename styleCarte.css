@@ -4,11 +4,10 @@
 :root{
     --font-polic:font-family  'Tinos', serif;
     --font-size:1.3rem;
-    --color-text: #fefde5;
+    --color-text: #fffefc;
     --color-textS2: #333;
     --color-text-Hover: #e4ab4e;
-    --bg-color: #271c19;
-    --bg-colorS2: #302226;
+    --bg--colorBody: #cb9643;
     --bg-colorFoot: #181818;
 }
 /* -------------------HTML DOOM---------------------- */
@@ -103,7 +102,7 @@ nav ul li:hover a{
 }
 /* -------------------Corps général------------------------ */
 body{
-    background: var(--color-text-Hover);
+    background: linear-gradient( to bottom, var(--bg--colorBody), #000000);
     font-family: var(--font-polic);
     color: var(--color-text);
 }
@@ -192,6 +191,115 @@ h1{
 .carte__detailsLien>a:hover{
     color: var(--color-text-Hover);
 }
+/* -------------------- FOOTER ----------------------- */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background: linear-gradient(to top, var(--bg-colorFoot),var(--bg-colorS3));
+    color: var(--color-text);
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.footer div h3{
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.boite1{
+    letter-spacing: 1px;
+    padding-left: 5%;
+}
+.icons {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.icons img{
+    transition: 0.2s ease-in-out;
+}
+.boite1 div a img{
+    height: 20px;
+    width: 20px;
+}
+.boite1 div a img:hover{
+    background: var(--clr);
+    border-radius: 2px;
+}
+.boite1 div a img.insta:hover{
+    background: linear-gradient(45deg, #ec6739, #ab2f9d,#2e1ce5);
+}
+.boite2{
+    flex-grow: 2;
+}
+/* -------BTN-INSCRIVEZ-VOUS-------- */
+.mailNewLetter{
+    font-weight: 550;
+    font-size: 19px;
+    width: 350px;
+    height: 45px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    background-color: #514C4BFF;
+    color: var(--color-text);
+}
+.btnInscrivezVous{
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.btnInscrivezVous:hover, .boite3 button:hover{
+    background: #33333393;
+}
+.boite3 a{
+    color: var(--color-text);
+}
+.boite3 {
+    letter-spacing: 1px;
+    padding-right: 5%;
+}
+/* -------BTN-CONTACT------- */
+.boite3 input{
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.boite3 button{
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.4s ease-in-out;
+}
+.copyr{
+    background: var(--bg-colorS3);
+    text-align: center;
+    color: var(--color-text);
+    font-size: 12px;
+    padding: 5px;
+}
 /* -----------------------Animation avec .slid----------------------*/
 @media(prefers-reduced-motion){
     .slidG, .slidD, .slidH, .slidB, .slidO {
@@ -221,4 +329,194 @@ h1{
     filter: blur(0);
 }
 /* -----------------------FIN des animations ----------------------- */
+/* -----------------------RESPONSIVE----------------------- */
+@media (max-width : 800px) {
+    /* -----------------------NavBar ----------------------- */
+    header .logoNav {
+        padding-left: 10px;
+    }
 
+    header ul li a {
+        margin-right: 10px;
+    }
+}
+@media (max-width :650px ) {
+    .menuToggle {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 0 10px #fff;
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    header.active .menuToggle::before {
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    header.active .menuToggle::after {
+        transform: translateY(0px) rotate(315deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    header.active .menuToggle:hover::before, header.active .menuToggle:hover::after {
+        background-color: #e4ab4e;
+    }
+
+    .menuToggle:hover {
+        color: #e4ab4e;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header.active ul {
+        z-index: 1000;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 72px);
+        left: 0;
+        top: 72px;
+        backdrop-filter: blur(20px);
+        background: #271c19da;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    header.active ul li a {
+        font-size: 2em;
+    }
+
+    .logoNav img {
+        width: 40px;
+    }
+    /* ------------FOOTER--------------- */
+    .footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+    }
+    .boite1{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .boite2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    /* -------BTN-INSCRIVEZ-VOUS-------- */
+    .btnInscrivezVous:hover, .boite3 button:hover{
+        transform: scale(1.1);
+        background: #33333393;
+    }
+    .boite3 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}
+@media (max-width :775px ){
+    /* ------------------Footer--------------------- */
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /* -------Ouverture------- */
+    .boite1{
+        padding: 0px 0;
+    }
+    /* -------BTN-INSCRIVEZ-VOUS------- */
+    .mailNewLetter{
+        font-size: 14px;
+        width: 250px;
+        height: 25px;
+        margin-top: 10px;
+    }
+    .btnInscrivezVous{
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+    .boite3 {
+        margin-top: 20px;
+        padding-right: 0%;
+    }
+    .copyr{
+        display: none;
+    }
+}
+@media (max-width :400px ){
+    .carte{
+        padding: 0 0px 10px 0px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-gap: 15px 0px;
+    }
+    .carte__details{
+        padding: 20px 30px;
+        display: grid;
+        grid-template-rows: auto 1fr 50px;
+        grid-row-gap: 15px;
+    }
+    .titrepage>h1{
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .titrepage>h4{
+        font-size: 20px;
+    }
+    .carte__detailsPrix>h2,h3{
+        font-size: 17px;
+    }
+    .carte__detailsLien>h3{
+        font-size: 16px;
+    }
+    .carte__details>p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .carteItems img{
+        background-size: cover;
+        position: relative;
+        height: 240px;
+        cursor: pointer;
+    }
+}
