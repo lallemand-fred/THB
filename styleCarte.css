@@ -192,3 +192,33 @@ h1{
 .carte__detailsLien>a:hover{
     color: var(--color-text-Hover);
 }
+/* -----------------------Animation avec .slid----------------------*/
+@media(prefers-reduced-motion){
+    .slidG, .slidD, .slidH, .slidB, .slidO {
+        transition: none;
+    }
+}
+/* ------------Déplacement du haut vers le bas------------ */
+.slidH{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translatey(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translatey(0);
+}
+/* -----------------------Flou d'apparition ----------------------- */
+.slidO{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1.5s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+/* -----------------------FIN des animations ----------------------- */
+
