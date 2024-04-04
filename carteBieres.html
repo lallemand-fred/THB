@@ -2,12 +2,171 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styleCarte.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Bières</title>
+    <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png">
+    <link rel="stylesheet" href="./styleCarte.css">
+    <script defer src="./App.js"></script>
 </head>
 <body>
-
+    <!-- ------------------------------------------ l'Entête de page ------------------------ -->
+    <header>
+        <!-- ------------------------------------------- Navbar ----------------------------- -->
+        <nav class="navbar" role="navigation">
+            <a href="#" class="logoNav"><img src="./media/logoHUGGYS01Ptit.png" alt=""></a>
+            <div class="menuToggle"></div>
+            <ul class="nav">
+                <li><a class="deux-linges" href="./index.html#">Accueil</a></li>
+                <li><a class="deux-linges" href="./index.html#laCarte">La carte</a></li>
+                <li><a class="deux-linges" onclick="reserv()" href="./index.html#reservation">Réservation</a></li>
+                <li><a class="deux-linges" onclick="contact()" href="./index.html#reservation">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- ---------------------------------- Titre de l'entête de page ------------------- -->
+        <div class="titrepage slidH">
+            <h1>Huggy's bar</h1>
+            <h4>&mdash;Nos Bières&mdash;</h4>
+        </div>
+    </header>
+    <!-- ---------------------------------- Section carte des bières ------------------- -->
+    <div class="carte slidO">
+        <div class="carteItems">
+            <img src="./media/carteBière/THBEER.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>THBEER©</h2>
+                </div>
+                <p> <br><br>
+                    Type : Bière ambrée<br>
+                    Degrés d’alcool : 6°<br>
+                    Robe : Brun chêne<br>
+                    Nez : Caramel<br>
+                    Bouche : Amertume douce & prolongée<br>
+                    IBU : 20<br>
+                    Brasserie C X The Huggy’s Bar
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="BACON">
+            <img src="./media/carteBière/BACON-THBEER.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>BACON THBEER©</h2>
+                </div>
+                <p><br><br>
+                    Type : Bière fumée / Smoked Ale<br>
+                    Degrés d’alcool : 6°<br>
+                    Robe : Blonde<br>
+                    Nez : Céréales grillées et bacon<br>
+                    Bouche : Légère et fumée<br>
+                    IBU : 16<br>
+                    Brasserie C X The Huggy’s Bar<br>
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="LITE">
+            <img src="./media/carteBière/THBEER-LITE.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>THBEER© LITE</h2>
+                </div>
+                <p><br><br>
+                    Type : Session Ale<br>
+                    Degrés d’alcool : 2,8°<br>
+                    Robe : Blonde claire<br>
+                    Nez : Passion et agrumes<br>
+                    Bouche : Amertume acidulée<br>
+                    IBU : 16<br>
+                    Brasserie C X The Huggy’s Bar<br>
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="PILS">
+            <img src="./media/carteBière/PILSA.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>PILS</h2>
+                </div>
+                <p><br><br>
+                    Type : Pils<br>
+                    Degrés d’alcool : 5°<br>
+                    Robe : Blonde claire<br>
+                    Nez : Malt d'orge et houblon<br>
+                    Bouche : Pétillante & rafraîchissante<br>
+                    IBU : 14<br>
+                    Brasserie C X The Huggy’s Bar
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="BLONDIE">
+            <img src="./media/carteBière/BLONDIE.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>BLONDIE</h2>
+                </div>
+                <p><br><br>
+                    Type : Bière blonde<br>
+                    Degrés d’alcool : 6,5°<br>
+                    Robe : Blonde<br>
+                    Nez : Agrumes<br>
+                    Bouche : Amertume fleurie<br>
+                    IBU : 18<br>
+                    Brasserie C X The Huggy’s Bar
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="SHIVA">
+            <img src="./media/carteBière/SHIVA-THBEER.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>SHIVA THBEER</h2>
+                </div>
+                <p><br><br>
+                    Type : Bière IPA<br>
+                    Degrés d’alcool : 7°<br>
+                    Robe : Orange dorée<br>
+                    Nez : Houblonné<br>
+                    Bouche : Amertume & agrumes<br>
+                    IBU : 40<br>
+                    Brasserie C X The Huggy’s Bar<br>
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="ROSITA">
+            <img src="./media/carteBière/ROSITA.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>ROSITA</h2>
+                </div>
+                <p><br><br>
+                    Type : Bière fruitée<br>
+                    Degrés d’alcool : 5°<br>
+                    Robe : Rose framboise<br>
+                    Nez : Fruité<br>
+                    Bouche : Fruits rouges<br>
+                    IBU : 12<br>
+                    Brasserie C X The Huggy’s Bar
+                </p>
+            </div>
+        </div>
+        <div class="carteItems" id="TRINITY">
+            <img src="./media/carteBière/TRINITY.jpg" alt="" class="carte__image" >
+            <div class="carte__details">
+                <div class="carte__detailsPrix">
+                    <h2>TRINITY</h2>
+                </div>
+                <p><br><br>
+                    Type : Bière triple<br>
+                    Degrés d’alcool : 8,8°<br>
+                    Robe : Caramel doré<br>
+                    Nez : Houblonné<br>
+                    Bouche : Caramel<br>
+                    IBU : 26<br>
+                    Brasserie C X The Huggy’s Bar
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
