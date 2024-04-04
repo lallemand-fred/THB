@@ -394,7 +394,6 @@ h1{
     header ul {
         display: none;
     }
-
     header.active ul {
         z-index: 1000;
         position: fixed;
