@@ -319,7 +319,7 @@ body{
     max-width: 256px;
     shape-outside: content-box;
 }
-/* -------------------- MENU3 ----------------------- */
+/* --------------------- MENU3 ----------------------- */
 .menu3{
     padding-top: 100px;
     padding-bottom: 50px;
@@ -422,7 +422,7 @@ body{
 .cardre:nth-child(3){
     transition-delay: 600ms;
 }
-/* -------------------- FORMULAIRE ----------------------- */
+/* --------------------- FORMULAIRE ----------------------- */
 #reservation{
     position: relative;
     width: auto;
