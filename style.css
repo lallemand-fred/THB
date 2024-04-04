@@ -911,9 +911,9 @@ body{
         z-index: 1000;
         position: fixed;
         width: 100%;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 52px);
         left: 0;
-        top: 72px;
+        top: 52px;
         backdrop-filter: blur(20px);
         background: #271c19da;
         display: flex;
