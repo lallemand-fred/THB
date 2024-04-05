@@ -31,7 +31,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: auto;
+    width: 100%;
     padding: 4px 0px;
     display: flex;
     justify-content: space-between;
@@ -105,8 +105,7 @@ nav ul li:hover a{
 }
 /* ------------------- BODY ------------------------- */
 body{
-    /*overflow-x: hidden;*/
-    overflow: hidden;
+    overflow-x: hidden;
     background: var(--bg-color);
     color: var(--color-text);
 }
