@@ -31,7 +31,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     padding: 4px 0px;
     display: flex;
     justify-content: space-between;
@@ -111,7 +111,7 @@ body{
 }
 #separation01{
     position: relative;
-    width: 100%;
+    width: auto;
     height: 80px;
     background: var(--bg-color);
 }
@@ -130,7 +130,7 @@ body{
     position: relative;
     background-color: var(--bg-color);
     height: 924px;
-    width: 100%;
+    width: auto;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -436,6 +436,7 @@ body{
     min-height: 100vh;
     background: var(--bg-colorS3);
     flex-direction: column;
+    width: auto;
 }
 .selectFormBtn .btn{
     letter-spacing: 0.5px;
