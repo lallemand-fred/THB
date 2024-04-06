@@ -109,12 +109,12 @@ body{
     background: var(--bg-color);
     color: var(--color-text);
 }
-#separation01{
+/*#separation01{
     position: relative;
     width: auto;
     height: 80px;
     background: var(--bg-color);
-}
+}*/
 /* --------- Flou dégradé autour de l'image ---------- */
 #secImageAccueil::before{
     padding-right: 10px;
@@ -130,7 +130,7 @@ body{
     position: relative;
     background-color: var(--bg-color);
     height: 924px;
-    width: auto;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -436,7 +436,7 @@ body{
     min-height: 100vh;
     background: var(--bg-colorS3);
     flex-direction: column;
-    width: auto;
+    width: 100%;
 }
 .selectFormBtn .btn{
     letter-spacing: 0.5px;
@@ -871,6 +871,7 @@ body{
         align-items: center;
         cursor: pointer;
         margin-right: 0px;
+        padding-right: 25px;
     }
 
     .menuToggle::before {
