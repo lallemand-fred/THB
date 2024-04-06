@@ -1,5 +1,9 @@
 
-
+//------------------------------Page de chargement---------------------------
+const loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  loader.classList.add("fondu-out");
+});
 // ----------------------------------Animations déplacement et blur--------------------------------
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entre) => {

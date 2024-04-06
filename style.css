@@ -14,6 +14,12 @@
     --bg-colorS2: #302226;
     --bg-colorS3: #27211F;
     --bg-colorFoot: #181818;
+    /* -------------------Chargement------------------ */
+    --font-size-chargemnt-Mobil:2.5em;
+    --font-size-chargemnt:6em;
+    --text-chargement01: #484848;
+    --text-chargement02: #fff900;
+    --bg-chargement:  #000;
 }
 /* -------------------HTML DOOM---------------------- */
 *{
@@ -722,6 +728,72 @@ body{
     font-size: 12px;
     padding: 5px;
 }
+/* --------------------- Animation de chargement ----------------------------- */
+.loader{
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-chargement);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre{
+    color: #484848;
+    font-size: var(--font-size-chargemnt);
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    0%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+    90%{
+        color: var(--text-chargement01);
+        text-shadow: none;
+    }
+    100%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s ;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s ;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s ;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s ;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s ;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s ;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s ;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s ;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s ;
+}
+.lettre:nth-child(10){
+    animation-delay:1s ;
+}
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
 /* -----------------------Animation avec .slid----------------------*/
 @media(prefers-reduced-motion){
     .slidG, .slidD, .slidH, .slidB, .slidO {
@@ -789,6 +861,11 @@ body{
 /* -----------------------FIN des animations ----------------------- */
 /* -----------------------RESPONSIVE----------------------- */
 @media (max-width : 800px){
+    /* --------------------- Chargement ----------------------------- */
+    .lettre{
+        font-size: var(--font-size-chargemnt-Mobil);
+        letter-spacing: 1px;
+    }
     /* -----------------------NavBar ----------------------- */
     nav .logoNav{
         padding-left: 10px;
