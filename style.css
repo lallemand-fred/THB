@@ -4,7 +4,9 @@
 /* --------------------- ROOT ------------------------ */
 :root{
     --font-police:font-family 'Tinos', serif;
-    --font-size:1.3rem;
+    --font-size:1.2rem;
+    --font-size-tablet:1rem;
+    --font-size-phone:0.75rem;
     --color-text: #fefde5;
     --color-textS2: #333;
     --color-text-Hover: #e4ab4e;
@@ -111,7 +113,7 @@ body{
 }
 /*#separation01{
     position: relative;
-    width: auto;
+    width: 100%;
     height: 80px;
     background: var(--bg-color);
 }*/
@@ -423,12 +425,6 @@ body{
     transition-delay: 600ms;
 }
 /* --------------------- FORMULAIRE ----------------------- */
-#reservation{
-    position: relative;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, var(--bg-colorS2), var(--bg-colorS3) )  ;
-}
 .wrapper{
     display: flex;
     justify-content: center;
@@ -437,6 +433,15 @@ body{
     background: var(--bg-colorS3);
     flex-direction: column;
     width: 100%;
+}
+#reservation{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, var(--bg-colorS2), var(--bg-colorS3) )  ;
+}
+#contacterBtn{
+    margin-left: 15px;
 }
 .selectFormBtn .btn{
     letter-spacing: 0.5px;
@@ -454,9 +459,6 @@ body{
 }
 .btn:hover{
     background: rgba(255, 255, 255, 0.3);
-}
-#contacterBtn{
-    margin-left: 15px;
 }
 .btn.white-btn{
     background: rgba(255, 255, 255, 0.7);
@@ -788,10 +790,10 @@ body{
 /* -----------------------RESPONSIVE----------------------- */
 @media (max-width : 800px){
     /* -----------------------NavBar ----------------------- */
-    header .logoNav{
+    nav .logoNav{
         padding-left: 10px;
     }
-    header ul li a{
+    nav ul li a{
         margin-right: 10px;
     }
     /* -----------------------Animations ----------------------- */
@@ -873,7 +875,6 @@ body{
         margin-right: 0px;
         padding-right: 25px;
     }
-
     .menuToggle::before {
         content: '';
         position: absolute;
@@ -884,7 +885,6 @@ body{
         transition: 0.5s;
         box-shadow: 0 10px #fff;
     }
-
     .menuToggle::after {
         content: '';
         position: absolute;
@@ -894,21 +894,17 @@ body{
         transform: translateY(10px);
         transition: 0.5s;
     }
-
     header.active .menuToggle::before {
         transform: translateY(0px) rotate(45deg);
         box-shadow: 0 0 #fff;
     }
-
     header.active .menuToggle::after {
         transform: translateY(0px) rotate(315deg);
         box-shadow: 0 0 #fff;
     }
-
     header.active .menuToggle:hover::before, header.active .menuToggle:hover::after {
         background-color: #e4ab4e;
     }
-
     .menuToggle:hover {
         color: #e4ab4e;
     }
@@ -931,11 +927,9 @@ body{
         flex-direction: column;
         gap: 40px;
     }
-
     header.active ul li a {
         font-size: 2em;
     }
-
     .logoNav img {
         width: 40px;
     }
@@ -960,7 +954,7 @@ body{
     #textPresentation h1 {
         order: 1;
         letter-spacing: 1px;
-        font-size: 16px;
+        font-size: var(--font-size-tablet);
         padding: 0 50px;
         margin-top: -5px;
         padding-bottom: 15px;
@@ -1001,7 +995,7 @@ body{
         height: 100px;
     }
     .wrapper{
-        min-height: 90vh;
+        min-height: 70%;
         width: 100%;
     }
     .selectFormBtn .btn{
@@ -1061,8 +1055,8 @@ body{
         transform: translate(-25px);
     }
     .textArea{
-        padding-left: 10px;
-        font-size: 16px;
+        padding-left: 20px;
+        font-size: var(--font-size-tablet);
         height: 130px;
         width: 60%;
     }
@@ -1080,14 +1074,14 @@ body{
 
     /* -------BTN-INSCRIVEZ-VOUS------- */
     .mailNewLetter{
-        font-size: 14px;
+        font-size: var(--font-size-tablet);
         width: 250px;
         height: 25px;
         margin-top: 10px;
     }
     .btnInscrivezVous{
         padding: 10px 40px;
-        font-size: 14px;
+        font-size: var(--font-size-tablet);
     }
     .boite3 {
         margin-top: 20px;
@@ -1098,4 +1092,62 @@ body{
         padding: 0px;
         padding-bottom: 15px;
     }
+@media (max-width :400px ){
+    /* ------------------formulaire Réservation--------------------- */
+    #reservation{
+        height: 60px;
+    }
+    .wrapper{
+        min-height: 60%;
+        width: 100%;
+    }
+    .selectFormBtn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #contacterBtn{
+        margin-left: 0px;
+    }
+    .titleFom{
+        width: 40%;
+        height: 20px;
+    }
+    .top h2{
+        padding-bottom: 60px;
+    }
+    .inputField{
+        font-size:var(--font-size-phone);
+        width: 40%;
+    }
+    .submit{
+        width: 40%;
+        font-size: 20px;
+    }
+    .confidentialite {
+        letter-spacing: 0.2px;
+        font-size:var(--font-size-phone);
+        color: white;
+    }
+    /* ------------------Contact formulaire--------------------- */
+    .contacterContainer{
+        font-size:var(--font-size-phone);
+    }
+    .nom{
+        transform: translate(55px);
+        width: 50%;
+    }
+    .prenom{
+        transform: translate(-55px);
+        width: 50%;
+    }
+    .textArea{
+        padding-left: 20px;
+        font-size: var(--font-size-phone);
+        height: 130px;
+        width: 40%;
+    }    
+
+    }
+    
 }
