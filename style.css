@@ -1105,11 +1105,41 @@ body{
         min-height: 600px;
     }
     .containerMenu{
-        gap: 50px 10px;
+        gap: 80px 10px;
         padding: 50px 0px;
     }
-    
-    
+    .containerMenu .cardre{
+        width: 250px;
+        height: 370px;
+    }
+    .containerMenu .cardre:hover{
+        height: 370px;
+    }
+    .containerMenu .cardre .imgBx{
+        top: 15px;
+        width: 200px;
+        height: 280px;
+    }
+    .containerMenu .cardre .contenu{
+        top: 295px;
+        padding: 20px 20px;
+    }
+    .containerMenu .cardre:hover .contenu{
+        top: 160px;
+        height: 250px;
+    }
+    .containerMenu .cardre .contenu h2{
+        font-size: var(--font-size);
+    }
+    .containerMenu .cardre .contenu p{
+        letter-spacing: 0.5px;
+        font-size: var(--font-size-phone);
+    }
+    .containerMenu .cardre .contenu a{
+        font-size: var(--font-size);
+        top: 20px;
+        padding: 10px 20px;
+    }
     /* ------------------formulaire Réservation--------------------- */
     #reservation{
         height: 60px;
