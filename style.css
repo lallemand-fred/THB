@@ -29,7 +29,7 @@
     text-decoration: none;
     font-family: var(--font-police);
     box-sizing: border-box;
-    /*border: solid 1px red;*/
+    border: solid 1px red;
 }
 html{
     scroll-behavior: smooth;
