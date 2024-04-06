@@ -954,7 +954,7 @@ body{
     #textPresentation h1 {
         order: 1;
         letter-spacing: 1px;
-        font-size: var(--font-size-tablet);
+        font-size: 20px;
         padding: 0 50px;
         margin-top: -5px;
         padding-bottom: 15px;
@@ -968,7 +968,7 @@ body{
     }
     #textPresentation{
         overflow-x: hidden;
-        font-size: 13px;
+        font-size: var(--font-size);
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -1092,6 +1092,24 @@ body{
         padding-bottom: 15px;
     }
 @media (max-width :400px ){
+    /* ------------------ Texte présentation --------------------- */
+    #textPresentation p {
+        letter-spacing: 1px;
+        margin: 0 20px;
+        font-size: var(--font-size-phone);
+    }
+    /* --------------------- MENU 3 cartes ----------------------- */
+    .menu3{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 600px;
+    }
+    .containerMenu{
+        gap: 50px 10px;
+        padding: 50px 0px;
+    }
+    
+    
     /* ------------------formulaire Réservation--------------------- */
     #reservation{
         height: 60px;
