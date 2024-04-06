@@ -1087,7 +1087,6 @@ body{
         margin-top: 20px;
         padding-right: 0%;
     }
-    /* -------BTN-CONTACT------- */
     .copyr{
         padding: 0px;
         padding-bottom: 15px;
@@ -1146,8 +1145,23 @@ body{
         font-size: var(--font-size-phone);
         height: 130px;
         width: 40%;
-    }    
-
+    } 
+    /* -------BTN-INSCRIVEZ-VOUS------- */
+    .mailNewLetter{
+        font-size: var(--font-size-phone);
+        width: 220px;
+        margin-top: 10px;
+    } 
+    .boite2 {
+        margin-top: 10px;
+    }  
+    .btnInscrivezVous{
+        font-size: var(--font-size-phone);
+    }
+    .copyr{
+        font-size: 10px;
+        padding-bottom: 10px;
+    }
     }
     
 }
