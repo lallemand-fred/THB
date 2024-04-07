@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./App.js"></script>
     <title>The Huggy's bar</title>
 </head>
 <body>
-    <!-- ------------------------------------------ l'Entête de page ------------------------ -->
+    <!-- ________________________________________ l'Entête de page et Navbar ________________________________________  -->
     <header>
-        <!-- ------------------------------------------- Navbar ----------------------------- -->
         <nav class="navbar" role="navigation">
             <a href="#secImageAccueil" class="logoNav"><img src="./media/logoHUGGYS01Ptit.png" alt=""></a>
             <div class="menuToggle"></div>
@@ -25,7 +24,7 @@
             </ul>
         </nav>
     </header>
-    <!-- ----------------------------------- Page de chargement LOADER ---------------------- -->
+    <!-- ________________________________________ Page de chargement LOADER ________________________________________ -->
     <div class="loader">
         <s class="lettre">C</s>
         <s class="lettre">H</s>
@@ -38,23 +37,23 @@
         <s class="lettre">N</s>
         <s class="lettre">T</s>
     </div>
-    <div id="separation01"></div>
-    <!-- -------------------------------------- Images Accueil----------------------------- -->
+    <div class="separation01"></div>
+    <!-- ________________________________________ Images Accueil ________________________________________ -->
     <section id="secImageAccueil">
-        <!-- ---------------------------- Image Fond Accueil vide----------------------------- -->
+        <!-- ________________________________________ Image Fond Accueil vide ________________________________________ -->
         <img class="imageTHBEER" src="./media/backgroundTHBEER/THBEER01.png" alt="">
-        <!-- --------------------------------- Images Droite----------------------------- -->
+        <!-- ________________________________________ Images Droite ________________________________________ -->
         <img class="imageTHBEER flecheD" src="./media/backgroundTHBEER/droite/THBEERFlècheD.png" alt="">
         <img class="imageTHBEER exclaD" src="./media/backgroundTHBEER/droite/THBEERExclamationD.png" alt="">
         <img class="imageTHBEER rondD" src="./media/backgroundTHBEER/droite/THBEERRond25cl.png" alt="">
         <img class="imageTHBEER verreD" src="./media/backgroundTHBEER/droite/THBEERVerre25cl.png" alt="">
-        <!-- --------------------------------- Images Gauche----------------------------- -->
+        <!-- ________________________________________ Images Gauche ________________________________________ -->
         <img class="imageTHBEER flecheG" src="./media/backgroundTHBEER/gauche/THBEERFlècheG.png" alt="">
         <img class="imageTHBEER exclaG" src="./media/backgroundTHBEER/gauche/THBEERExclamationG.png" alt="">
         <img class="imageTHBEER rondG" src="./media/backgroundTHBEER/gauche/THBEERRond50cl.png" alt="">
         <img class="imageTHBEER verreG" src="./media/backgroundTHBEER/gauche/THBEERVerre50cl.png" alt="">
     </section>
-    <!-- --------------------------------------- Texte de présentation ----------------------------- -->
+    <!-- ________________________________________ Texte de présentation ________________________________________ -->
     <main>
         <section id="presentation">
             <div id="textPresentation">
@@ -79,9 +78,9 @@
                 </p>
             </div>
         </section>
-        <!-- ---------------------------- Menu 3 cartes choix BURGER BEER STARTERS ---------------------------- -->
-        <div id="laCarte"></div>
+        <!-- ________________________________________ Menu 3 cartes choix BURGER BEER STARTERS________________________________________ -->
         <section class="menu3">
+            <div id="laCarte"></div>
             <div class="containerMenu">
                 <div class="cardre slidG" style="--clr: #89433c;">
                     <div class="imgBx">
@@ -117,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <!----------------------------- Btn de formulaire de réservation ou contact ----------------------------------->
+        <!-- ________________________________________ Btn de formulaire de réservation ou contact ________________________________________ -->
         <div id="reservation"></div>
         <section class="wrapper ">
             <div class="selectForm slidO">
@@ -126,9 +125,9 @@
                     <button class="btn" id="contacterBtn" onclick="contact()">Contact</button>
                 </div>
             </div>
-            <!----------------------------- Form box ----------------------------------->
+            <!-- ________________________________________ Form box ________________________________________ -->
             <section class="formBox slidO">
-                <!------------------- Reservation -------------------------->
+                <!-- ________________________________________ Reservation ________________________________________ -->
                 <form class="reservContainer" action="#" id="reserv">
                     <div class="top inputBox">
                         <h2 class="titleFom ">Réservation</h2>
@@ -179,7 +178,7 @@
                     </div>
                 </form>
                 <div id="contac"></div>
-                <!------------------- Contact -------------------------->
+                <!-- ________________________________________ Contact ________________________________________ -->
                 <form class="contacterContainer" action="#contacter" method="POST" id="contacter">
                     <input type="hidden" name="_subject">
                     <div class="top inputBox">
@@ -196,6 +195,9 @@
                     <div class="inputBox">
                         <input type="text" class="inputField" placeholder="Email" required>
                     </div>
+                    <div class="inputBox">
+                        <input type="tel" class="inputField" name="phone" placeholder="Numéro de tel: +32" required pattern="(^(([0-9]{2})\.){4}[0-9]{2}$)">
+                    </div> 
                     <div class="inputBox texteZone">
                         <textarea spellcheck="true"  class="textArea" type = "text"  name="textarea" placeholder="Tapez votre message ici..." required></textarea>
                     </div>
@@ -207,7 +209,7 @@
         </section>
     </main>
     <footer class="footer">
-        <!-- --------------------------------- Icones & infos heurs d'ouverture----------------------------- -->
+        <!-- ________________________________________ Icones & infos heurs d'ouverture ________________________________________ -->
         <div class="boite1">
             <h3>Nous ouvrons</h3>
             <P>De 12h à 22h<br> 7j / 7 toute l’année,<br>même les jours fériés.</P>
@@ -220,7 +222,7 @@
                 <a href=""><img src="./media/icons250px/youtubeBlanc.png" style="--clr:#dd2a25;" alt="Icone reseaux sociaux Facebook"></a>
             </div>
         </div>
-        <!-- -------------------------------------- NEWSLETTER BTN ----------------------------- -->
+        <!-- ________________________________________ NEWSLETTER BTN ________________________________________ -->
         <div class="boite2">
             <h3>NEWSLETTER</h3>
             <form>
@@ -228,7 +230,7 @@
                 <button class="btnInscrivezVous" type="submit">INSCRIVEZ-VOUS</button>
             </form>
         </div>
-        <!-- --------------------------------- Contact BTN & infos ----------------------------- -->
+        <!-- ________________________________________ Contact BTN & infos ________________________________________ -->
         <div class="boite3">
             <h3>Contact</h3>
             <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
