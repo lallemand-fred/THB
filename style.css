@@ -327,6 +327,11 @@ body{
     max-width: 256px;
     shape-outside: content-box;
 }
+/* div de séparation  */
+#laCarte{
+    height: 50px;
+    
+}
 /* --------------------- MENU3 ----------------------- */
 .menu3{
     padding-top: 100px;
