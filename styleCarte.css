@@ -484,12 +484,12 @@ h1{
         display: none;
     }
 }
-@media (max-width :400px ){
+@media (max-width :425px ){
     .carte{
         padding: 0 0px 10px 0px;
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-        grid-gap: 15px 0px;
+        grid-template-columns: repeat(auto-fit, 270px);
+        grid-gap: 20px 0px;
     }
     .carte__details{
         padding: 20px 30px;
@@ -515,9 +515,16 @@ h1{
         line-height: 25px;
     }
     .carteItems img{
-        background-size: cover;
-        position: relative;
-        height: 240px;
-        cursor: pointer;
+        height: 200px;
+    }
+    @media  (max-width :290px ){
+        .carte{
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 220px);
+            grid-gap: 20px 0px;
+        }
+        .carte img{
+            height: 155px;
+        }
     }
 }
