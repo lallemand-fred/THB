@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Starters</title>
+    <link rel="shortcut icon" href="../media/logoHUGGYS01Ptit.png">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../style/styleCarte.css">
+    <script defer src="../App.js"></script>
+</head>
+<body>
+    <!-- ------------------------------------------ l'Entête de page ------------------------ -->
+    <header>
+        <!-- ------------------------------------------- Navbar ----------------------------- -->
+        <nav class="navbar" role="navigation">
+            <a href="#" class="logoNav"><img src="../media/logoHUGGYS01Ptit.png" alt=""></a>
+            <div class="menuToggle"></div>
+            <ul class="nav">
+                <li><a class="deux_linges" href="../index.html#">Accueil</a></li>
+                <li><a class="deux_linges" href="../index.html#laCarte">La carte</a></li>
+                <li><a class="deux_linges" onclick="reserv()" href="../index.html#reservation">Réservation</a></li>
+                <li><a class="deux_linges" onclick="contact()" href="../index.html#reservation">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- ---------------------------------- Titre de l'entête de page ------------------- -->
+        <div class="titrepage slidH">
+            <h1>Huggy's bar</h1>
+            <h4>&mdash;Nos Starters&mdash;</h4>
+        </div>
+    </header>
+    <!-- ---------------------------------- Section carte des starters ------------------- -->
+    <main>
+        <section class="carte slidO">
+            <article class="carteItems">
+                <img src="../media/carteStarters/Cheesy-Jalapenos.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Cheesy Jalapeños</h2>
+                        <h3 class="prix" >4€</h3>
+                    </div>
+                    <p>
+                        On se les arrache !<br>
+                        À la carte depuis le tout début,<br>
+                        nos Cheesy Jalapeños sont de délicieuses petites croquettes
+                        fourrées de Cheddar et de piments légers.<br>
+                        Servis avec notre tartare maison et notre sauce THB.
+                    </p>
+                </aside>
+            </article>
+            <article class="carteItems">
+                <img src="../media/carteStarters/Chicken-Nuggets.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Chicken Nuggets</h2>
+                        <h3 class="prix" >5.5€</h3>
+                    </div>
+                    <p>
+                        De véritables chicken nuggets golden and crispy qui
+                        feraient craquer même les Fans de Burgers qui ne raffolent pas de starters !<br>
+                        Bien évidemment accompagnés de nos sauces maison incontournables : la THB et la tartare.
+                    </p>
+                </aside>
+            </article>
+            <article class="carteItems">
+                <img src="../media/carteStarters/Chicken-Wings.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Chicken Wings</h2>
+                        <h3 class="prix" >5€</h3>
+                    </div>
+                    <p>
+                        Gourmandes à souhait, nos Chicken Wings sont de tendres ailes de poulet préparées façon THB : épicés et relevées avec de la sauce sweet chili.
+                        A manger avec les doigts, nos Chicken Wings sont parfaites en attendant votre Burger.
+                    </p>
+                </aside>
+            </article>
+            <article class="carteItems">
+                <img src="../media/carteStarters/Dirty-Nachos.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Dirty Nachos</h2>
+                        <h3 class="prix" >4.5€</h3>
+                    </div>
+                    <p>
+                        Découvrez le starter le plus extravagant du Huggy’s Bar.<br>
+                        Le Dirty Nachos saura combler les appétits les plus crapuleux : BBQ beef, sour cream, tomate séchées, bacon, sauce Cheddar, jalap’, guacamole, etc.
+                    </p>
+                </aside>
+            </article>
+            <article class="carteItems">
+                <img src="../media/carteStarters/Meatballs-sauce-BBQ.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Meatballs sauce BBQ</h2>
+                        <h3 class="prix" >6.5€</h3>
+                    </div>
+                    <p>
+                        Grandes favorites du Huggy’s, nul ne peut ignorer l’existence de nos Meatballs sauce BBQ.
+                        Fourrées au Cheddar et jalapeños, et accompagnées de notre célèbre BBQ maison, ce starter épicé et relevé est parfait à partager.
+                    </p>
+                </aside>
+            </article>
+            <article class="carteItems">
+                <img src="../media/carteStarters/Nachos-sauce-Cheddar.jpg" alt="" class="carte_image" >
+                <aside class="carte_details starterP">
+                    <div class="carte_detailsPrix">
+                        <h2>Nachos sauce Cheddar</h2>
+                        <h3 class="prix" >4.5€</h3>
+                    </div>
+                    <p>
+                        Impossible de venir au Huggy’s sans craquer pour les Nachos sauce Cheddar ! Notre starter auquel personne ne peut résister, c’est lui !
+                        Garni de jalapenos, de sauce Cheddar maison et de bacon sur demande.
+                    </p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <!-- --------------------------------------------------- FOOTERS --------------------------------------- -->
+    <footer class="footer">
+        <!-- --------------------------------- Icones & infos heurs d'ouverture----------------------------- -->
+        <div class="boite1">
+            <h3>Nous ouvrons</h3>
+            <P>De 12h à 22h<br> 7j / 7 toute l’année,<br>même les jours fériés.</P>
+            <div class="icons">
+                <a href=""><img src="../media/icons250px/facebookBlanc.png" style="--clr:#4867aa;"  alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/inBlanc.png" style="--clr:#006394;" alt="Icone reseaux sociaux LinkedIn"></a>
+                <a href=""><img src="../media/icons250px/instagramBlanc.png" class="insta" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/tiktokBlanc.png" style="--clr:#313131;" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/twitterBlanc.png" style="--clr:#1c9cea;" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/youtubeBlanc.png" style="--clr:#dd2a25;" alt="Icone reseaux sociaux Facebook"></a>
+            </div>
+        </div>
+        <!-- -------------------------------------- NEWSLETTER BTN ----------------------------- -->
+        <div class="boite2">
+            <h3>NEWSLETTER</h3>
+            <form>
+                <input class="mailNewLetter" type="email" placeholder="E-mail" required><br>
+                <button class="btnInscrivezVous" type="submit">INSCRIVEZ-VOUS</button>
+            </form>
+        </div>
+        <!-- --------------------------------- Contact BTN & infos ----------------------------- -->
+        <div class="boite3">
+            <h3>Contact</h3>
+            <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
+            <button class="btnContact_popup btn" id="contacterBt" onclick="contact()"><a href="../index.html#contacterBtn">Contactez-nous</a></button>
+        </div>
+    </footer>
+    <div class="copyr">© Copyright 2023 The Huggy’s Bar - Ce site est un fake!!!</div>
+</body>
+</html>
