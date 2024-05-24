@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1.5, minimum-scale=0.86, shrink-to-fit=no">
         <link rel="shortcut icon" href="./media/logoHUGGYS01Ptit.png" >
         <link rel="stylesheet" href="./normalize.css">
-        <link rel="stylesheet" href="./style.css" >
+        <link rel="stylesheet" href="./style/style.css" >
         <script defer src="./App.js"></script>
         <title>The Huggy's bar</title>
     </head>
@@ -18,10 +18,10 @@
                 <a href="#secImageAccueil" class="logoNav"><img src="./media/logoHUGGYS01Ptit.png" alt=""></a>
                 <div class="menuToggle"></div>
                 <ul class="nav">
-                    <li><a class="deux-linges" href="#">Accueil</a></li>
-                    <li><a class="deux-linges" href="#laCarte">La carte</a></li>
-                    <li><a class="deux-linges" onclick="reserv()" href="#reservation">Réservation</a></li>
-                    <li><a class="deux-linges" onclick="contact()" href="#reservation">Contact</a></li>
+                    <li><a class="deux_linges" href="#">Accueil</a></li>
+                    <li><a class="deux_linges" href="#laCarte">La carte</a></li>
+                    <li><a class="deux_linges" onclick="reserv()" href="#reservation">Réservation</a></li>
+                    <li><a class="deux_linges" onclick="contact()" href="#reservation">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -66,7 +66,7 @@
             </aside> -->
             <!-- ________________________________________ Texte de présentation ________________________________________ -->
             <section id="presentation">
-                <div id="textPresentation">
+                <article id="textPresentation">
                     <h1 class="slidO">L’UNIVERS DU HUGGY’S BAR</h1>
                     <div class="slidG">
                         <img src="./media/logoHUGGYS01.png" alt="Logo restaurant">
@@ -86,44 +86,44 @@
                     <br> <p class="slidG"> Quels que soient vos goûts ou votre régime alimentaire,
                     on vous promet une expérience gustative inoubliable !
                     </p>
-                </div>
+                </article>
             </section>
             <!-- ________________________________________ Menu 3 cartes choix BURGER BEER STARTERS________________________________________ -->
             <div id="laCarte"></div>
             <section class="menu3">
                 <div class="containerMenu">
-                    <div class="cardre slidG" style="--clr: #89433c;">
+                    <article class="cardre slidG" style="--clr: #89433c;">
                         <div class="imgBx">
                             <img src="./media/menuBurger01.jpg" alt="">
                         </div>
-                        <div class="contenu">
+                        <aside class="contenu">
                             <h2>BURGERS</h2>
                             <p>Nos 43 Burgers sont servis accompagnés de frites fraîches et
                                 d’une salade de coleslaw maison, tous deux à volonté !</p>
-                            <a href="./carteBurger.html#">Nos burgers</a>
-                        </div>
-                    </div>
-                    <div class="cardre slidG" style="--clr:#E4AB4E;">
+                            <a class="btn_lien_carte" href="./pages/carteBurger.html#">Nos burgers</a>
+                        </aside>
+                    </article>
+                    <article class="cardre slidG" style="--clr:#E4AB4E;">
                         <div class="imgBx">
                             <img src="./media/menuBier01.jpg" alt="">
                         </div>
-                        <div class="contenu">
+                        <aside class="contenu">
                             <h2>BIÈRES</h2>
                             <p> Pour une alliance parfaite, pensez à prendre une de nos 8 bières
                                 maison pour accompagner votre hamburger</p>
-                            <a href="./carteBieres.html#">Nos bières</a>
-                        </div>
-                    </div>
-                    <div class="cardre slidG" style="--clr:#385361;">
+                            <a class="btn_lien_carte" href="./pages/carteBieres.html#">Nos bières</a>
+                        </aside>
+                    </article>
+                    <article class="cardre slidG" style="--clr:#385361;">
                         <div class="imgBx">
                             <img src="./media/menuStarter01.jpg" alt="">
                         </div>
-                        <div class="contenu">
+                        <aside class="contenu">
                             <h2>STARTERS</h2>
                             <p>Rapidement servis et très gourmands, vous pouvez les poser au milieu de la table et les partager… Ou les garder pour vous !</p>
-                            <a href="./carteStarters.html">Nos starters</a>
-                        </div>
-                    </div>
+                            <a class="btn_lien_carte" href="./pages/carteStarters.html">Nos starters</a>
+                        </aside>
+                    </article>
                 </div>
             </section>
             <!-- ________________________________________ Btn de formulaire de réservation ou contact ________________________________________ -->
@@ -131,7 +131,7 @@
             <div class="wrapper ">
                 <div class="selectForm slidO">
                     <div class="selectFormBtn">
-                        <button class="btn white-btn" id="reservBtn" onclick="reserv()">Réservation</button>
+                        <button class="btn white_btn" id="reservBtn" onclick="reserv()">Réservation</button>
                         <button class="btn" id="contacterBtn" onclick="contact()">Contact</button>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                         </div>
                     </form>
                     <!-- ________________________________________ Contact ________________________________________ -->
-                    <form class="contacterContainer" action="#contacter" method="POST" id="contacter">
+                    <form class="contacterContainer" action="#" id="contacter">
                         <input type="hidden" name="_subject">
                         <div class="top inputBox">
                             <h2 class="titleFom">Contactez-nous</h2>
@@ -211,7 +211,8 @@
                             <textarea spellcheck="true"  class="textArea" name="textarea" minlength=5 maxlength=50 placeholder="Tapez votre message ici..." required></textarea>
                         </div>
                         <div class="inputBox">
-                            <button type="submit" class="submit">Contactez-nous</button>
+                            <!--<button type="submit" value="#" class="submit">Contactez-nous</button>-->
+                            <input type="submit" class="submit" value="Contactez-nous">
                         </div>
                     </form>
                 </section>
@@ -243,7 +244,7 @@
             <div class="boite3">
                 <h3>Contact</h3>
                 <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
-                <button class="btnContact-popup btn" id="contacterBt" onclick="contact()">Contactez-nous</button>
+                <button class="btnContact_popup btn" id="contacterBt" onclick="contact()">Contactez-nous</button>
             </div>
         </footer>
         <div class="copyr">© Copyright 2023 The Huggy’s Bar - Ce site est un fake!!!</div>
