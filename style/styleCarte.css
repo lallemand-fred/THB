@@ -40,6 +40,7 @@ nav{
     background: linear-gradient( to bottom, rgb(39,28,25), transparent);
 }
 nav .logoNav{
+    z-index: 1000;
     position: relative;
     max-width: 60px;
     padding-left: 20px;
@@ -348,8 +349,44 @@ h1{
         margin-right: 10px;
     }
 }
+@media (max-width :775px ){
+    /* ------------------Footer--------------------- */
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /* -------Ouverture------- */
+    .boite1{
+        padding: 0px 0;
+    }
+    /* -------BTN-INSCRIVEZ-VOUS------- */
+    .mailNewLetter{
+        font-size: 14px;
+        width: 250px;
+        height: 35px;
+        margin-top: 10px;
+    }
+    .btnInscrivezVous{
+        padding: 10px 40px;
+        font-size: 15px;
+    }
+    .boite3 {
+        margin-top: 20px;
+        padding-right: 0%;
+    }
+    .copyr{
+        display: none;
+    }
+}
 @media (max-width :650px ) {
     .menuToggle {
+        z-index: 1000;
         position: relative;
         width: 30px;
         height: 20px;
@@ -357,38 +394,46 @@ h1{
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        margin-right: 20px;
+        margin-right: 0px;
+        padding-right: 30px;
     }
 
     .menuToggle::before {
         content: '';
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 4px;
         background: #fff;
-        transform: translateY(-10px);
+        transform: translateY(0px);
         transition: 0.5s;
         box-shadow: 0 10px #fff;
+        border-radius: 10px;
     }
 
     .menuToggle::after {
         content: '';
         position: absolute;
         width: 100%;
-        height: 2px;
+        height:10px;
         background: #fff;
         transform: translateY(10px);
         transition: 0.5s;
+        transform: translateY(-13px);
+        border-radius: 50px 50px 10px 10px;
     }
 
     header.active .menuToggle::before {
         transform: translateY(0px) rotate(45deg);
         box-shadow: 0 0 #fff;
+        border-radius: 10px;
+        height: 4px;
     }
 
     header.active .menuToggle::after {
         transform: translateY(0px) rotate(315deg);
         box-shadow: 0 0 #fff;
+        height: 4px;
+        border-radius: 10px;
     }
 
     header.active .menuToggle:hover::before, header.active .menuToggle:hover::after {
@@ -403,14 +448,14 @@ h1{
         display: none;
     }
     header.active ul {
-        z-index: 1000;
+        transition: 0.2s ease-in-out;
+        z-index: 500;
         position: fixed;
         width: 100%;
-        height: calc(100vh - 52px);
+        height: calc(100vh);
         left: 0;
-        top: 52px;
-        backdrop-filter: blur(20px);
-        background: #271c19da;
+        top: 0px;
+        background: #271c19;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -453,41 +498,6 @@ h1{
         display: flex;
         flex-direction: column;
         padding: 20px 0;
-    }
-}
-@media (max-width :775px ){
-    /* ------------------Footer--------------------- */
-    .footer{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    /* -------Ouverture------- */
-    .boite1{
-        padding: 0px 0;
-    }
-    /* -------BTN-INSCRIVEZ-VOUS------- */
-    .mailNewLetter{
-        font-size: 14px;
-        width: 250px;
-        height: 35px;
-        margin-top: 10px;
-    }
-    .btnInscrivezVous{
-        padding: 10px 40px;
-        font-size: 15px;
-    }
-    .boite3 {
-        margin-top: 20px;
-        padding-right: 0%;
-    }
-    .copyr{
-        display: none;
     }
 }
 @media (max-width :425px ){
