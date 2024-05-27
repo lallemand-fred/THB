@@ -9,6 +9,12 @@
     --color-text-Hover: #e4ab4e;
     --bg--colorBody: #cb9643;
     --bg-colorFoot: #181818;
+    /* -------------------Chargement------------------ */
+    --font-size-chargemnt-Mobil:2.5em;
+    --font-size-chargemnt:6em;
+    --text-chargement01: #484848;
+    --text-chargement02: #fff900;
+    --bg-chargement:  #000;
 }
 /* -------------------HTML DOOM---------------------- */
 *, ::before, ::after{
@@ -203,15 +209,13 @@ h1{
 }
 /* -------------------- FOOTER ----------------------- */
 .footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 0px;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 60px;
     background: linear-gradient(to top, var(--bg-colorFoot),var(--bg-colorS3));
     color: var(--color-text);
+    display: flex;
 }
 .footer div{
     text-align: center;
@@ -223,7 +227,7 @@ h1{
 }
 .boite1{
     letter-spacing: 1px;
-    padding-left: 4%;
+    padding-left: 5%;
 }
 .icons {
     padding-top: 10px;
@@ -245,10 +249,13 @@ h1{
 .boite1 div a img.insta:hover{
     background: linear-gradient(45deg, #ec6739, #ab2f9d,#2e1ce5);
 }
+/* -------BTN-INSCRIVEZ-VOUS-------- */
 .boite2{
     flex-grow: 2;
 }
-/* -------BTN-INSCRIVEZ-VOUS-------- */
+.mailNewLetter::placeholder{
+    color: white;
+}
 .mailNewLetter{
     font-weight: 550;
     font-size: 19px;
@@ -261,37 +268,25 @@ h1{
     outline: none;
     border: none;
     background-color: #514C4BFF;
-    color: var(--color-text);
+    color: white;
 }
 .btnInscrivezVous{
     background: transparent;
     border: 2px solid var(--color-text);
-    color: var(--color-text);
+    color: white;
     border-radius: 30px;
     padding: 10px 40px;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
-.btnInscrivezVous:hover, .boite3 button:hover{
-    background: #33333393;
-}
-.boite3 a{
-    color: var(--color-text);
-}
+/* -------BTN-CONTACT------- */
 .boite3 {
     letter-spacing: 1px;
-    padding-right: 4%;
+    padding-right: 5%;
 }
-/* -------BTN-CONTACT------- */
-.boite3 input{
-    height: 45px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-.boite3 button{
+.btnContact{
+    display: block;
     background: transparent;
     border: 2px solid var(--color-text);
     color: var(--color-text);
@@ -299,15 +294,87 @@ h1{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 5px;
     transition: all 0.4s ease-in-out;
+    transform: translatey(5px);
 }
+.btnInscrivezVous:hover, .boite3 a:hover{
+    background: #33333393;
+}
+/* --------------------- COPYR ----------------------------- */
 .copyr{
     background: var(--bg-colorS3);
     text-align: center;
     color: var(--color-text);
     font-size: 12px;
 
+}
+/* --------------------- Animation de chargement de page ----------------------------- */
+.loader{
+    transform: translateY(-304px);
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-chargement);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre{
+    color: #484848;
+    font-size: var(--font-size-chargemnt);
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    0%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+    90%{
+        color: var(--text-chargement01);
+        text-shadow: none;
+    }
+    100%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s ;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s ;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s ;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s ;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s ;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s ;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s ;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s ;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s ;
+}
+.lettre:nth-child(10){
+    animation-delay:1s ;
+}
+.fondu-out{
+    z-index:-1;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
 }
 /* -----------------------Animation avec .slid----------------------*/
 @media(prefers-reduced-motion){
@@ -340,6 +407,11 @@ h1{
 /* -----------------------FIN des animations ----------------------- */
 /* -----------------------RESPONSIVE----------------------- */
 @media (max-width : 800px) {
+    /* --------------------- Chargement ----------------------------- */
+    .lettre{
+        font-size: var(--font-size-chargemnt-Mobil);
+        letter-spacing: 1px;
+    }
     /* -----------------------NavBar ----------------------- */
     header .logoNav {
         padding-left: 10px;

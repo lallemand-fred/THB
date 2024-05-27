@@ -334,7 +334,7 @@ body{
     height: 50px;
     
 }
-/* --------------------- MENU3 ----------------------- */
+/* --------------------- MENU 3 liens ----------------------- */
 .menu3{
     padding-top: 100px;
     padding-bottom: 50px;
@@ -675,10 +675,13 @@ body{
 .boite1 div a img.insta:hover{
     background: linear-gradient(45deg, #ec6739, #ab2f9d,#2e1ce5);
 }
+/* -------BTN-INSCRIVEZ-VOUS-------- */
 .boite2{
     flex-grow: 2;
 }
-/* -------BTN-INSCRIVEZ-VOUS-------- */
+.mailNewLetter::placeholder{
+    color: white;
+}
 .mailNewLetter{
     font-weight: 550;
     font-size: 19px;
@@ -703,25 +706,14 @@ body{
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
-.btnInscrivezVous:hover, .boite3 button:hover{
-    background: #33333393;
-}
-.boite3 a{
-    color: var(--color-text);
-}
+/* -------BTN-CONTACT------- */
+
 .boite3 {
     letter-spacing: 1px;
     padding-right: 5%;
 }
-/* -------BTN-CONTACT------- */
-.boite3 input{
-    height: 45px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-.boite3 button{
+.btnContact{
+    display: block;
     background: transparent;
     border: 2px solid var(--color-text);
     color: var(--color-text);
@@ -729,9 +721,13 @@ body{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 5px;
     transition: all 0.4s ease-in-out;
+    transform: translatey(5px);
 }
+.btnInscrivezVous:hover, .boite3 a:hover{
+    background: #33333393;
+}
+/* --------------------- COPYR ----------------------------- */
 .copyr{
     background: var(--bg-colorFoot);
     text-align: center;
