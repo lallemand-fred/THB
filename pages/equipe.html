@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1.5, minimum-scale=0.86, shrink-to-fit=no">
+        <link rel="shortcut icon" href="../media/logoHUGGYS01Ptit.png" >
+        <link rel="stylesheet" href="../normalize.css">
+        <link rel="stylesheet" href="../style/style.css" >
+        <script defer src="../App.js"></script>
+        <title>The Huggy's bar</title>
+    </head>
+<body>
+    <!-- ________________________________________ l'Entête de page et Navbar ________________________________________  -->
+    <header>
+        <nav class="navbar" >
+            <a href="#secImageAccueil" class="logoNav"><img src="../media/logoHUGGYS01Ptit.png" alt=""></a>
+            <div class="menuToggle"></div>
+            <ul class="nav">
+                <li><a class="deux_linges" href="../index.html#">Accueil</a></li>
+                <li><a class="deux_linges" href="../index.html#laCarte">La carte</a></li>
+                <li><a class="deux_linges" onclick="reserv()" href="../index.html#reservation">Réservation</a></li>
+                <li><a class="deux_linges" onclick="contact()" href="../index.html#reservation">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ________________________________________ Page de chargement LOADER ________________________________________ -->
+    <main>
+        <div class="loader">
+            <s class="lettre">C</s>
+            <s class="lettre">H</s>
+            <s class="lettre">A</s>
+            <s class="lettre">R</s>
+            <s class="lettre">G</s>
+            <s class="lettre">E</s>
+            <s class="lettre">M</s>
+            <s class="lettre">E</s>
+            <s class="lettre">N</s>
+            <s class="lettre">T</s>
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <!-- --------------------------------- Icones & infos heurs d'ouverture----------------------------- -->
+        <div class="boite1">
+            <h3>Nous ouvrons</h3>
+            <P>De 12h à 22h<br> 7j / 7 toute l’année,<br>même les jours fériés.</P>
+            <div class="icons">
+                <a href=""><img src="../media/icons250px/facebookBlanc.png" style="--clr:#4867aa;"  alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/inBlanc.png" style="--clr:#006394;" alt="Icone reseaux sociaux LinkedIn"></a>
+                <a href=""><img src="../media/icons250px/instagramBlanc.png" class="insta" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/tiktokBlanc.png" style="--clr:#313131;" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/twitterBlanc.png" style="--clr:#1c9cea;" alt="Icone reseaux sociaux Facebook"></a>
+                <a href=""><img src="../media/icons250px/youtubeBlanc.png" style="--clr:#dd2a25;" alt="Icone reseaux sociaux Facebook"></a>
+            </div>
+        </div>
+        <!-- -------------------------------------- NEWSLETTER BTN ----------------------------- -->
+        <div class="boite2">
+            <h3>NEWSLETTER</h3>
+            <form>
+                <input class="mailNewLetter" type="email" placeholder="E-mail" required><br>
+                <button class="btnInscrivezVous" type="submit">INSCRIVEZ-VOUS</button>
+            </form>
+        </div>
+        <!-- --------------------------------- Contact BTN & infos ----------------------------- -->
+        <div class="boite3">
+            <h3>Contact</h3>
+            <p>Boulevard d'Avroy, 122<br>4000 Liège<br>+32 0 200 52 28<br></p>
+            <a href="../index.html#contacterBtn" class="btnContact btn"  onclick="contact()">Contactez-nous</a>
+        </div>
+    </footer>
+    <div class="copyr">© Copyright 2023 The Huggy’s Bar - Ce site est un fake!!!</div>
+</body>
+</html>
