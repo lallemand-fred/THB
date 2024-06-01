@@ -889,7 +889,7 @@ body{
     transform: translateY(-99px);
 } */
 .bodyEquipe{
-    background: var(--bg-colorFoot);
+    background: var(--bg-colorS3);
 }
 .copyrequip{
     display:block;
@@ -1015,7 +1015,7 @@ body{
         margin-top: 0px;
     }
     .teamsHuggys iframe{
-        border-radius:50px;
+        
         height: 260px;
         width: 460px;
 
@@ -1110,6 +1110,32 @@ body{
     .transiFoot::before{
         z-index: 1;
         transform: translateY(-641px);
+    }
+}
+/* -----------------------RESPONSIVE 710px----------------------- */
+@media (max-width : 710px){
+/* ----------------------- Footer equipe ----------------------- */
+    .videoBackground{
+        opacity: 0;
+    }
+    .teamsHuggys{
+        padding-top: 45px;
+    }
+    .teamsHuggys p{
+        z-index: 10;
+        margin-top: 1px;
+    }
+    .transiFoot{
+        margin-top: 100px;
+    }
+    .transiFoot::before{
+        z-index: 1;
+        transform: translateY(-642px);
+    }
+    .teamsHuggys iframe{
+        border-radius:50px;
+        height: 260px;
+        width: 460px;
     }
 }
 /* -----------------------RESPONSIVE 650px----------------------- */
@@ -1351,21 +1377,42 @@ body{
         margin-top: 20px;
         padding-right: 0%;
     }
+    /* ----------------------- Footer equipe ----------------------- */
     .copyr{
         padding: 0px;
         padding-bottom: 15px;
     }
     
+    .transiFoot{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 150px;
+    }
     .transiFoot::before{
-        z-index: 1;
-        transform: translateY(-542px);
+        display: none;
     }
     .teamsHuggys iframe{
-        z-index: 1;
+        z-index: 3;
         border-radius:50px;
         height: 260px;
         width: 460px;
     }
+}
+/* -----------------------RESPONSIVE 490px----------------------- */
+@media (max-width :490px ){
+    .transiFoot{
+        margin-top: 185px;
+    }
+    .teamsHuggys iframe{
+        height: 260px;
+        width: 426px;
+    }
+}
+@media (max-width :450px ){
+    .transiFoot{
+        margin-top: 219px;
+    }
+
 }
 /* -----------------------RESPONSIVE 400px----------------------- */
 @media (max-width :400px ){
@@ -1487,5 +1534,34 @@ body{
         font-size: 10px;
         padding-bottom: 10px;
     }
+    .teamsHuggys iframe{
+        border-radius: 5px;
+        height: 144px;
+        width: 256px;
+    } 
+    /* -----------------------RESPONSIVE 360px----------------------- */
+    @media (max-width :360px ){
+        .transiFoot{
+            margin-top: 240px;
+        }
+    }               
+    /* -----------------------RESPONSIVE 320px----------------------- */
+    @media (max-width :320px ){
+        .teamsHuggys h1{
+            font-size: 1.5rem;
+        }  
+        .transiFoot{
+            margin-top: 240px;
+        }
+    }               
+    /* -----------------------RESPONSIVE 275px----------------------- */
+    @media (max-width :275px ){
+    .teamsHuggys p{
+        font-size: 1rem;
+    }
+    .transiFoot{
+        margin-top: 260px;
+    }
+    }               
 }
     
