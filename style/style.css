@@ -646,6 +646,7 @@ body{
 }
 /* -------------------- FOOTER ----------------------- */
 .footer{
+    flex: 1;
     margin-top: 0px;
     width: 100%;
     padding-top: 50px;
@@ -878,30 +879,22 @@ body{
 }
 /* -----------------------FIN des animations ----------------------- */
 /* ------------------------- Pages équipes ------------------------- */
-/* .bordBas::before{
-    z-index: 100;
-    content: '';
-    position: absolute;
-    display: block;
-    background: linear-gradient(to top ,var(--bg-color), transparent);
-    width: 100%;
-    height: 100px;
-    transform: translateY(-99px);
-} */
 .bodyEquipe{
     background: var(--bg-colorS3);
 }
 .copyrequip{
-    display:block;
+    flex: 1;
+    display:inline;
     text-align: center;
     bottom: 0;
     width: 100%;
 }
 .transiFoot{
-    display: flex;
-    position: initial;
+    margin-top: 30px;
+    flex: 1;
+    display:inline-flex;
+    position: relative;
     bottom: 0;
-    float: bottom;
 }
 .transiFoot::before{
     z-index: 1;
@@ -1353,7 +1346,7 @@ body{
     /* ------------------Footer--------------------- */
     .footer{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 20px;
     }
     .icons {
