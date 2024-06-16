@@ -566,7 +566,6 @@ h1{
     }
     /* -------BTN-INSCRIVEZ-VOUS-------- */
     .btnInscrivezVous:hover, .boite3 button:hover{
-        transform: scale(1.1);
         background: #33333393;
     }
     .boite3 {

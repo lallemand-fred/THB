@@ -727,7 +727,6 @@ body{
     display: flex;
     text-align: center;
 }
-
 .footer h3{
     font-weight: 800;
     margin-bottom: 20px;
@@ -1003,10 +1002,8 @@ body{
         margin-top: 0px;
     }
     .teamsHuggys iframe{
-        
         height: 260px;
         width: 460px;
-
         transform: translateY(-5px);
     }
     .transiFoot{
@@ -1087,7 +1084,7 @@ body{
     }
     /* -------BTN-INSCRIVEZ-VOUS-------- */
     .btnInscrivezVous:hover, .boite3 button:hover{
-        transform: scale(1.1);
+        
         background: #33333393;
     }
     .boite3 {
@@ -1389,19 +1386,14 @@ body{
 /* -----------------------RESPONSIVE 490px----------------------- */
 @media (max-width :490px ){
     .transiFoot{
-        margin-top: 185px;
+        margin-top: 55%;
     }
     .teamsHuggys iframe{
         height: 260px;
         width: 426px;
     }
 }
-@media (max-width :450px ){
-    .transiFoot{
-        margin-top: 219px;
-    }
 
-}
 /* -----------------------RESPONSIVE 400px----------------------- */
 @media (max-width :400px ){
     /* ------------------ Texte présentation --------------------- */
@@ -1544,6 +1536,11 @@ body{
     }               
     /* -----------------------RESPONSIVE 275px----------------------- */
     @media (max-width :275px ){
+
+    .containerMenu .cardre{
+        width: 230px;
+    }
+        
     .teamsHuggys p{
         font-size: 1rem;
     }
