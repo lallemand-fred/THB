@@ -1054,7 +1054,7 @@ body{
         letter-spacing: 3px;
         margin: 0 50px;
     }
-    /* ------------LOGO--------------- */
+    /* ------------LOGO texte--------------- */
     #textPresentation img{
         border-radius: 100%;
         max-width: 200px;
@@ -1542,6 +1542,7 @@ body{
     #secImageAccueil::before{
         height: 200px;
         width: 150px;
+        
     }
     #secImageAccueil{
         height: 200px;
@@ -1556,6 +1557,10 @@ body{
         padding: 0 5px;
         margin-top: -5px;
         padding-bottom: 15px;
+    }
+    /* ------------LOGO texte--------------- */
+    #textPresentation img{
+        max-width: 100px;
     }
     /*----------- page équipe --------------- */
     .containerMenu .cardre{
