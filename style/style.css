@@ -1029,13 +1029,9 @@ body{
     /* -----------------------Animations ----------------------- */
     .rondD{
         transform-origin: 85.5% 87.4% ;
-        transform: rotate(0deg);
-        animation: rondD 6s linear infinite;
     }
     .rondG{
         transform-origin: 14.6% 89% ;
-        transform: rotate(0deg) ;
-        animation: rondG 6s linear infinite;
     }
     /* -----------------------Bord flou de l'Image principal------------------------------- */
     #secImageAccueil::before{
@@ -1125,7 +1121,6 @@ body{
 }
 /* -----------------------RESPONSIVE 650px----------------------- */
 @media (max-width :650px ){
-    
     .menuToggle {
         z-index: 1000;
         position: relative;
@@ -1208,11 +1203,11 @@ body{
     #separation01::after{
         top: 0;
     }
+    /* -----------------------Image principal------------------------------- */
     #secImageAccueil::before{
         height: 315px;
         width: 250px;
     }
-    /* -----------------------Image principal------------------------------- */
     #secImageAccueil{
         height: 315px;
     }
@@ -1518,35 +1513,58 @@ body{
         border-radius: 5px;
         height: 144px;
         width: 256px;
-    } 
-    /* -----------------------RESPONSIVE 360px----------------------- */
-    @media (max-width :360px ){
-        .transiFoot{
-            margin-top: 240px;
-        }
-    }               
-    /* -----------------------RESPONSIVE 320px----------------------- */
-    @media (max-width :320px ){
-        .teamsHuggys h1{
-            font-size: 1.5rem;
-        }  
-        .transiFoot{
-            margin-top: 240px;
-        }
-    }               
-    /* -----------------------RESPONSIVE 275px----------------------- */
-    @media (max-width :275px ){
-
+    }              
+}
+/* -----------------------RESPONSIVE 360px----------------------- */
+@media (max-width :360px ){
+    .transiFoot{
+        margin-top: 240px;
+    }
+}               
+/* -----------------------RESPONSIVE 320px----------------------- */
+@media (max-width :320px ){
+    .teamsHuggys h1{
+        font-size: 1.5rem;
+    }  
+    .transiFoot{
+        margin-top: 240px;
+    }
+}               
+/* -----------------------RESPONSIVE 275px----------------------- */
+@media (max-width :275px ){
+    /* -----------------------Animations ----------------------- */
+    .rondD{
+        transform-origin: 88.5% 87.4% ;
+    }
+    .rondG{
+        transform-origin: 11.6% 89% ;
+    }
+    #secImageAccueil::before{
+        height: 200px;
+        width: 150px;
+    }
+    #secImageAccueil{
+        height: 200px;
+    }
+    #secImageAccueil img{
+        width: clamp(100px, 100%, 150px);
+    }
+    /*----------- H1 main --------------- */
+    #textPresentation h1 {
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        padding: 0 5px;
+        margin-top: -5px;
+        padding-bottom: 15px;
+    }
+    /*----------- page équipe --------------- */
     .containerMenu .cardre{
         width: 230px;
-    }
-        
+    }   
     .teamsHuggys p{
         font-size: 1rem;
     }
     .transiFoot{
         margin-top: 260px;
     }
-    }               
-}
-    
+}     
