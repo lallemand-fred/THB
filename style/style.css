@@ -34,6 +34,73 @@
 html{
     scroll-behavior: smooth;
 }
+/* --------------------- Animation de chargement ----------------------------- */
+.loader{
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-chargement);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre{
+    color: #484848;
+    font-size: var(--font-size-chargemnt);
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    0%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+    90%{
+        color: var(--text-chargement01);
+        text-shadow: none;
+    }
+    100%{
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
+    }
+}
+.lettre:nth-child(1){
+    animation-delay:0.1s ;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s ;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s ;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s ;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s ;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s ;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s ;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s ;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s ;
+}
+.lettre:nth-child(10){
+    animation-delay:1s ;
+}
+.fondu-out{
+    z-index:-1;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
 /* -------------------- NAVBAR ----------------------- */
 nav{
     position: fixed;
@@ -746,74 +813,87 @@ body{
     font-size: 12px;
     padding: 5px;
 }
-/* --------------------- Animation de chargement ----------------------------- */
-.loader{
-    z-index: 10000;
-    position: fixed;
+/* ------------------------- Pages équipes ------------------------- */
+.bodyEquipe{
+    background: var(--bg-colorS3);
+}
+.copyrequip{
+    flex: 1;
+    display:inline;
+    text-align: center;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    background: var(--bg-chargement);
+}
+.transiFoot{
+    margin-top: 30px;
+    flex: 1;
+    display:inline-flex;
+    position: relative;
+    bottom: 0;
+}
+.transiFoot::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    display: block;
+    background: linear-gradient(to top ,var(--bg-colorS3), transparent);
+    width: 100%;
+    height: 100px;
+    transform: translateY(-150px);
+}
+.videoBackground{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.team{
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 100%;
 }
-.lettre{
-    color: #484848;
-    font-size: var(--font-size-chargemnt);
-    letter-spacing: 15px;
-    margin-bottom: 150px;
-    animation: flash 1.2s linear infinite;
+.teamsHuggys h1{
+    padding: 15px 20px;
+    border-radius: 27% 73% 32% 68% / 63% 53% 47% 37% ;
+    background: #4d4d4d;
+    box-shadow: inset 21px 21px 42px #2d2d2d,
+                inset -21px -21px 42px #6d6d6d;
+                -webkit-box-shadow: 9px 17px 33px 13px #000000; 
 }
-@keyframes flash{
-    0%{
-        color: var(--text-chargement02);
-        text-shadow: 0 0 7px var(--text-chargement02);
-    }
-    90%{
-        color: var(--text-chargement01);
-        text-shadow: none;
-    }
-    100%{
-        color: var(--text-chargement02);
-        text-shadow: 0 0 7px var(--text-chargement02);
-    }
+.teamsHuggys{
+    padding-top: 80px;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    /* backdrop-filter: blur(5px); */
+    /* background: linear-gradient(to bottom, rgba(49, 49, 49, 0.527),rgba(219, 219, 219, 0.363),rgba(49, 49, 49, 0.527)); */
+    width: 100%;
 }
-.lettre:nth-child(1){
-    animation-delay:0.1s ;
+.teamsHuggys p{
+    z-index: 0;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: antiquewhite;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 89% 11% 88% 12% / 17% 85% 15% 83%  ;
+    background: rgb(46, 46, 46);
+    box-shadow: inset 21px 21px 42px #2d2d2d,
+                inset -21px -21px 42px #4b4b4b;
+    -webkit-box-shadow: 9px 17px 33px 13px #000000; 
 }
-.lettre:nth-child(2){
-    animation-delay:0.2s ;
+.teamsHuggys iframe{
+    z-index: 1200;
+    border-radius:50% 50% 50% 50px;
+    -webkit-box-shadow: 9px 17px 33px 13px #000000; 
+    box-shadow: 9px 17px 33px 13px #000000;
+    margin-bottom: 20px;
 }
-.lettre:nth-child(3){
-    animation-delay:0.3s ;
-}
-.lettre:nth-child(4){
-    animation-delay:0.4s ;
-}
-.lettre:nth-child(5){
-    animation-delay:0.5s ;
-}
-.lettre:nth-child(6){
-    animation-delay:0.6s ;
-}
-.lettre:nth-child(7){
-    animation-delay:0.7s ;
-}
-.lettre:nth-child(8){
-    animation-delay:0.8s ;
-}
-.lettre:nth-child(9){
-    animation-delay:0.9s ;
-}
-.lettre:nth-child(10){
-    animation-delay:1s ;
-}
-.fondu-out{
-    z-index:-1;
-    opacity: 0;
-    transition: opacity 0.4s ease-out;
-}
-/* -----------------------Animation avec .slid----------------------*/
+/* -----------------------Animation Mouvement avec .slid----------------------*/
 @media(prefers-reduced-motion){
     .slidG, .slidD, .slidH, .slidB, .slidO {
         transition: none;
@@ -876,95 +956,6 @@ body{
 .show{
     opacity: 1;
     filter: blur(0);
-}
-/* -----------------------FIN des animations ----------------------- */
-/* ------------------------- Pages équipes ------------------------- */
-.bodyEquipe{
-    background: var(--bg-colorS3);
-}
-.copyrequip{
-    flex: 1;
-    display:inline;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-}
-.transiFoot{
-    margin-top: 30px;
-    flex: 1;
-    display:inline-flex;
-    position: relative;
-    bottom: 0;
-}
-.transiFoot::before{
-    z-index: 1;
-    content: '';
-    position: absolute;
-    display: block;
-    background: linear-gradient(to top ,var(--bg-colorS3), transparent);
-    width: 100%;
-    height: 100px;
-    transform: translateY(-150px);
-}
-.videoBackground{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-.team{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-/* .teamsHuggys img{
-    border-radius: 11px;
-    width: 600px;
-    height: auto;
-    padding: 20px 10px ;
-    background: rgb(255, 255, 255);
-} */
-.teamsHuggys h1{
-    padding: 15px 20px;
-    border-radius: 27% 73% 32% 68% / 63% 53% 47% 37% ;
-    background: #4d4d4d;
-    box-shadow: inset 21px 21px 42px #2d2d2d,
-                inset -21px -21px 42px #6d6d6d;
-                -webkit-box-shadow: 9px 17px 33px 13px #000000; 
-}
-.teamsHuggys{
-    padding-top: 80px;
-    position:absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    /* backdrop-filter: blur(5px); */
-    /* background: linear-gradient(to bottom, rgba(49, 49, 49, 0.527),rgba(219, 219, 219, 0.363),rgba(49, 49, 49, 0.527)); */
-    width: 100%;
-}
-.teamsHuggys p{
-    z-index: 0;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    color: antiquewhite;
-    text-align: center;
-    padding: 20px 20px;
-    border-radius: 89% 11% 88% 12% / 17% 85% 15% 83%  ;
-    background: rgb(46, 46, 46);
-    box-shadow: inset 21px 21px 42px #2d2d2d,
-                inset -21px -21px 42px #4b4b4b;
-    -webkit-box-shadow: 9px 17px 33px 13px #000000; 
-}
-.teamsHuggys iframe{
-    z-index: 1200;
-    border-radius:50% 50% 50% 50px;
-    -webkit-box-shadow: 9px 17px 33px 13px #000000; 
-    box-shadow: 9px 17px 33px 13px #000000;
-    margin-bottom: 20px;
 }
 /* ------------------------RESPONSIVE 800px------------------------- */
 @media (min-width: 1540px) and (max-width: 1920px){
